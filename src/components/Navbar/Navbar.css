@@ -14,7 +14,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #1b1b1b;
   position: fixed;
   width: 100%;
   top: 0;
@@ -378,8 +378,6 @@
   .navbar .show-navbar {
     height: 100%;
     width: 100%;
-    -webkit-transition: 4s;
-    transition: 4s;
     -webkit-animation: nav-animate 2s linear forwards;
             animation: nav-animate 2s linear forwards;
   }

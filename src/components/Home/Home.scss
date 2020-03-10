@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-cloud {
+  background-color: rgb(175, 174, 174);
+  width: 100% !important;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 100%;
+  }
+  .cloud1 {
+    position: absolute;
+    top: 60px;
+    animation: cloud1 30s linear infinite;
+  }
+  .cloud2 {
+    position: absolute;
+    top: 30px;
+    animation: cloud1 20s linear infinite;
+  }
+  .cloud3 {
+    position: absolute;
+    top: 200px;
+    animation: cloud1 45s linear infinite;
+  }
+  .cloud4 {
+    position: absolute;
+    top: -50px;
+    animation: cloud1 15s linear infinite;
+  }
+  @keyframes cloud1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    height: 1250px !important;
+    .cloud1 {
+      top: 100px;
+    }
+    .cloud1 {
+      top: 80px;
+    }
+    .cloud3 {
+      top: 150px;
+    }
+    .cloud4 {
+      top: 400px;
+    }
+  }
+  .home-style {
+    position: absolute;
+    top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+      top: 30px;
+    }
+    .music {
+      position: relative;
+      width: 60%;
+      padding: 50px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      .circle {
+        position: relative;
+        overflow: hidden;
+        img {
+          border-radius: 50%;
+          //  position: absolute;
+          //  top: 0;
+          //  left: 0;
+          //  width: 100%;
+          //  height: 100%;
+          object-fit: cover;
+        }
+      }
+      .circle1 {
+        width: 30%;
+        margin-top: 20px;
+        float: left;
+        //border-radius: 50%;
+        shape-outside: circle();
+      }
+      .circle2 {
+        width: 40%;
+        float: right;
+        //border-radius: 50%;
+        shape-outside: circle();
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        padding: 5px;
+        text-align: justify;
+      }
+    }
+  }
+}
