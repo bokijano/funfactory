@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Lemonada", cursive;
+  color: rgba(154, 205, 50, 0.4);
+  overflow: hidden;
+}
+
+.navbar h1 span {
+  display: table-cell;
+  margin: 0;
+  padding: 1px;
+  -webkit-animation: head-animate 10s linear infinite;
+          animation: head-animate 10s linear infinite;
+}
+
+.navbar h1 span:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.navbar h1 span:nth-child(2) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.navbar h1 span:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.navbar h1 span:nth-child(5) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.navbar h1 span:nth-child(6) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.navbar h1 span:nth-child(7) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.navbar h1 span:nth-child(8) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.navbar h1 span:nth-child(9) {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+
+.navbar h1 span:nth-child(10) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.navbar h1 span:nth-child(11) {
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+@-webkit-keyframes head-animate {
+  0%,
+  100% {
+    color: yellowgreen;
+    text-shadow: 1px 1px 2px yellowgreen;
+    text-transform: uppercase;
+  }
+  50% {
+    color: #111;
+    text-shadow: 0 0 10px none;
+    text-transform: lowercase;
+  }
+}
+
+@keyframes head-animate {
+  0%,
+  100% {
+    color: yellowgreen;
+    text-shadow: 1px 1px 2px yellowgreen;
+    text-transform: uppercase;
+  }
+  50% {
+    color: #111;
+    text-shadow: 0 0 10px none;
+    text-transform: lowercase;
+  }
+}
+
+.navbar button {
+  background: yellowgreen;
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px #717e57, 0 0 200px yellowgreen;
+          box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px #717e57, 0 0 200px yellowgreen;
+  border: none;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  font-size: 2rem;
+  -webkit-animation: btn-animate 2s linear infinite;
+          animation: btn-animate 2s linear infinite;
+}
+
+@-webkit-keyframes btn-animate {
+  0% {
+    font-size: 2rem;
+  }
+  25% {
+    font-size: 2.1rem;
+  }
+  50% {
+    font-size: 2.2rem;
+  }
+  75% {
+    font-size: 2.1rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+@keyframes btn-animate {
+  0% {
+    font-size: 2rem;
+  }
+  25% {
+    font-size: 2.1rem;
+  }
+  50% {
+    font-size: 2.2rem;
+  }
+  75% {
+    font-size: 2.1rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+.navbar .navbar-style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-style a {
+  position: relative;
+  padding: 25px 30px;
+  margin: 10px 10px;
+  color: yellowgreen;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 4px;
+}
+
+.navbar .navbar-style a:hover {
+  background: yellowgreen;
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen, 0 0 200px yellowgreen;
+          box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen, 0 0 200px yellowgreen;
+}
+
+.navbar .navbar-style a:nth-child(1) {
+  -webkit-filter: hue-rotate(290deg);
+          filter: hue-rotate(290deg);
+}
+
+.navbar .navbar-style a:nth-child(3) {
+  -webkit-filter: hue-rotate(110deg);
+          filter: hue-rotate(110deg);
+}
+
+.navbar .navbar-style a span {
+  position: absolute;
+  display: block;
+}
+
+.navbar .navbar-style a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(yellowgreen));
+  background: linear-gradient(90deg, transparent, yellowgreen);
+  -webkit-animation: animate1 1s linear infinite;
+          animation: animate1 1s linear infinite;
+}
+
+.navbar .navbar-style a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(yellowgreen));
+  background: linear-gradient(180deg, transparent, yellowgreen);
+  -webkit-animation: animate2 1s linear infinite;
+          animation: animate2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.navbar .navbar-style a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(yellowgreen));
+  background: linear-gradient(270deg, transparent, yellowgreen);
+  -webkit-animation: animate3 1s linear infinite;
+          animation: animate3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.navbar .navbar-style a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(yellowgreen));
+  background: linear-gradient(360deg, transparent, yellowgreen);
+  -webkit-animation: animate4 1s linear infinite;
+          animation: animate4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+@-webkit-keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0;
+  }
+  .navbar h1 {
+    width: 70%;
+  }
+  .navbar .navbar-style {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .navbar .show-navbar {
+    height: 100%;
+    width: 100%;
+    -webkit-transition: 4s;
+    transition: 4s;
+    -webkit-animation: nav-animate 2s linear forwards;
+            animation: nav-animate 2s linear forwards;
+  }
+  @-webkit-keyframes nav-animate {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes nav-animate {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .navbar button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    float: right;
+    margin-left: 10%;
+  }
+  .navbar button:focus {
+    outline: none;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */
