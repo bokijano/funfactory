@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 
 import Music from "./Music";
-import Movies from "./Movies";
+import Movies from "./Movies/Movies";
 import Games from "./Games";
 
 function Home() {
