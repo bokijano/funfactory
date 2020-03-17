@@ -1,9 +1,8 @@
 import React from "react";
-import "./Home.css";
 
 import Music from "./Music";
 import Movies from "./Movies/Movies";
-import Games from "./Games";
+import Games from "./Games/Games";
 
 function Home() {
   return (
@@ -14,8 +13,6 @@ function Home() {
         </div>
         <div className="movies-display">
           <Movies />
-        </div>
-        <div className="games-display">
           <Games />
         </div>
       </div>

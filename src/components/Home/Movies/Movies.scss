@@ -1,15 +1,28 @@
 @import "./../heading";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 // movies part style
 .container-leaves {
   position: relative;
   width: 100% !important;
-  height: 770px;
+  height: 550px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: linear-gradient(#333, #000);
   border: 3px solid whitesmoke;
   border-radius: 20px;
+  @media screen and (max-width: 768px) {
+    height: 600px;
+  }
+  @media screen and (max-width: 320px) {
+    height: 770px;
+  }
   .back-leaves {
     position: absolute;
     width: 100%;
@@ -107,7 +120,7 @@
       @keyframes animate-leaf {
         0% {
           opacity: 0;
-          top: 0px;
+          top: 5px;
           transform: translateX(-20px) rotate(0deg);
         }
         10% {
@@ -118,8 +131,25 @@
         }
         100% {
           opacity: 0;
-          top: 770px;
-          //transform: translateX(20px) rotate(225deg);
+          top: 550px;
+        }
+      }
+      @media screen and (min-width: 320px) {
+        @keyframes animate-leaf {
+          0% {
+            opacity: 0;
+            top: 5px;
+          }
+          10% {
+            opacity: 1;
+          }
+          20% {
+            transform: translateX(-20px) rotate(25deg);
+          }
+          100% {
+            opacity: 0;
+            top: 770px;
+          }
         }
       }
     }
@@ -141,6 +171,40 @@
       padding: 50px;
       h1 {
         @include heading-style;
+      }
+      .circle {
+        position: relative;
+        overflow: hidden;
+        img {
+          position: relative;
+          width: 100%;
+          height: auto;
+          border-radius: 50%;
+        }
+      }
+      .circle1 {
+        width: 35%;
+        margin: 25px 5px 15px 5px;
+        float: left;
+        shape-outside: circle();
+      }
+      .circle2 {
+        width: 40%;
+        margin: 80px 0px 75px 5px;
+        float: right;
+        shape-outside: circle();
+      }
+      p {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        text-align: justify;
+      }
+      h3 {
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+        font-family: "Luckiest Guy", cursive;
       }
     }
   }

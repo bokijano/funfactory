@@ -1,3 +1,4 @@
+@import "./heading";
 * {
   margin: 0;
   padding: 0;
@@ -11,71 +12,18 @@
   flex-wrap: wrap;
   margin-top: 120px;
   .music-display {
-    width: 40%;
+    margin-top: 10%;
+    width: 45%;
   }
   .movies-display {
-    width: 50%;
-  }
-  .games-display {
-    width: 80%;
+    width: 55%;
   }
   @media screen and (max-width: 768px) {
     margin-top: 80px;
     .music-display,
-    .movies-display,
-    .games-display {
+    .movies-display {
+      margin-top: 0%;
       width: 100%;
-    }
-  }
-}
-
-// h1 mixin animation style
-@mixin heading-style {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Lemonada", cursive;
-  background-color: rgb(27, 27, 27);
-  border-radius: 15px;
-  margin: -50px 0 10px 0;
-  color: rgba(154, 205, 50, 0.4);
-  font-size: 1.5rem;
-  overflow: hidden;
-  span {
-    display: table-cell;
-    margin: 0;
-    padding: 1px;
-    animation: head-animate 10s linear infinite;
-    &:nth-child(1) {
-      animation-delay: 0s;
-    }
-    &:nth-child(2) {
-      animation-delay: 0.25s;
-    }
-    &:nth-child(3) {
-      animation-delay: 0.5s;
-    }
-    &:nth-child(5) {
-      animation-delay: 0.75s;
-    }
-    &:nth-child(6) {
-      animation-delay: 1s;
-    }
-    &:nth-child(7) {
-      animation-delay: 1.25s;
-    }
-  }
-  @keyframes head-animate {
-    0%,
-    100% {
-      color: yellowgreen;
-      text-shadow: 1px 1px 2px yellowgreen;
-      text-transform: uppercase;
-    }
-    50% {
-      color: #111;
-      text-shadow: 0 0 10px none;
-      text-transform: lowercase;
     }
   }
 }
@@ -165,12 +113,13 @@
     .music {
       background-image: url("./pictures/music/music1.png");
       background-repeat: no-repeat;
-      background-position: 90% 90%;
+      background-position: 90% 75%;
       background-size: 40%;
       position: relative;
-      padding: 50px;
+      padding: 50px 5px 5px 5px;
       @media screen and (max-width: 768px) {
         background-position: 90% 60%;
+        padding: 50px;
       }
       @media screen and (max-width: 500px) {
         top: 50px;
@@ -185,18 +134,6 @@
           width: 100%;
           height: auto;
           border-radius: 50%;
-          animation: animate-image 5s linear infinite;
-          @keyframes animate-image {
-            0% {
-              filter: grayscale(0%);
-            }
-            50% {
-              filter: grayscale(100%);
-            }
-            100% {
-              filter: grayscale(0%);
-            }
-          }
         }
       }
       .circle1 {
@@ -229,143 +166,6 @@
       h3 {
         text-align: center;
         font-family: "Luckiest Guy", cursive;
-      }
-    }
-  }
-  @keyframes animate-back {
-    0% {
-      background: skyblue;
-    }
-    30% {
-      background: rgb(175, 175, 175);
-    }
-    100% {
-      background: skyblue;
-    }
-  }
-}
-
-// games part style
-.container-pulse {
-  position: relative;
-  width: 100% !important;
-  display: flex;
-  flex-direction: column;
-  .back-pulse {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: rgb(27, 27, 27);
-    border: 3px solid whitesmoke;
-    border-radius: 20px;
-    overflow: hidden;
-    animation: pulseColor 20s linear infinite;
-    .pulse {
-      width: 100%;
-      height: 100%;
-      span {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        background: #fff;
-      }
-      span:nth-child(3n + 1) {
-        background: transparent;
-        border: 5px solid #fff;
-      }
-      span:nth-child(1) {
-        top: 50%;
-        left: 20%;
-        animation: anim-pulse 10s linear infinite;
-      }
-      span:nth-child(2) {
-        top: 80%;
-        left: 40%;
-        animation: anim-pulse 12s linear infinite;
-      }
-      span:nth-child(3) {
-        top: 10%;
-        left: 65%;
-        animation: anim-pulse 15s linear infinite;
-      }
-      span:nth-child(4) {
-        top: 50%;
-        left: 70%;
-        animation: anim-pulse 6s linear infinite;
-      }
-      span:nth-child(5) {
-        top: 10%;
-        left: 30%;
-        animation: anim-pulse 9s linear infinite;
-      }
-      span:nth-child(6) {
-        top: 90%;
-        left: 95%;
-        animation: anim-pulse 14s linear infinite;
-      }
-      span:nth-child(7) {
-        top: 80%;
-        left: 5%;
-        animation: anim-pulse 8s linear infinite;
-      }
-      span:nth-child(8) {
-        top: 35%;
-        left: 50%;
-        animation: anim-pulse 11s linear infinite;
-      }
-      span:nth-child(9) {
-        top: 5%;
-        left: 5%;
-        animation: anim-pulse 2s linear infinite;
-      }
-      span:nth-child(10) {
-        top: 25%;
-        left: 90%;
-        animation: anim-pulse 11s linear infinite;
-      }
-      @keyframes anim-pulse {
-        0% {
-          transform: scale(0) translateY(0) rotate(0deg);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1) translateY(-100px) rotate(360deg);
-          opacity: 0;
-        }
-      }
-    }
-  }
-  @keyframes pulseColor {
-    0% {
-      background-color: #f44336;
-    }
-    25% {
-      background-color: #03a9f4;
-    }
-    50% {
-      background-color: #9c27b0;
-    }
-    75% {
-      background-color: #00ff0a;
-    }
-    100% {
-      background-color: #f44336;
-    }
-  }
-
-  .pulse-style {
-    position: absolute;
-    top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (max-width: 768px) {
-      top: 30px;
-    }
-    .games {
-      position: relative;
-      padding: 50px;
-      h1 {
-        @include heading-style;
       }
     }
   }

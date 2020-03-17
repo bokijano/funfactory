@@ -1,0 +1,174 @@
+@import "./../heading";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// games part style
+.container-pulse {
+  position: relative;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  .back-pulse {
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    background: rgb(27, 27, 27);
+    border: 3px solid whitesmoke;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: pulseColor 20s linear infinite;
+    @media screen and (max-width: 768px) {
+      height: 600px;
+    }
+    @media screen and (max-width: 320px) {
+      height: 770px;
+    }
+    .pulse {
+      width: 100%;
+      height: 100%;
+      span {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: #fff;
+      }
+      span:nth-child(3n + 1) {
+        background: transparent;
+        border: 5px solid #fff;
+      }
+      span:nth-child(1) {
+        top: 50%;
+        left: 20%;
+        animation: anim-pulse 10s linear infinite;
+      }
+      span:nth-child(2) {
+        top: 80%;
+        left: 40%;
+        animation: anim-pulse 12s linear infinite;
+      }
+      span:nth-child(3) {
+        top: 10%;
+        left: 65%;
+        animation: anim-pulse 15s linear infinite;
+      }
+      span:nth-child(4) {
+        top: 50%;
+        left: 70%;
+        animation: anim-pulse 6s linear infinite;
+      }
+      span:nth-child(5) {
+        top: 10%;
+        left: 30%;
+        animation: anim-pulse 9s linear infinite;
+      }
+      span:nth-child(6) {
+        top: 90%;
+        left: 95%;
+        animation: anim-pulse 14s linear infinite;
+      }
+      span:nth-child(7) {
+        top: 80%;
+        left: 5%;
+        animation: anim-pulse 8s linear infinite;
+      }
+      span:nth-child(8) {
+        top: 35%;
+        left: 50%;
+        animation: anim-pulse 11s linear infinite;
+      }
+      span:nth-child(9) {
+        top: 5%;
+        left: 5%;
+        animation: anim-pulse 2s linear infinite;
+      }
+      span:nth-child(10) {
+        top: 25%;
+        left: 90%;
+        animation: anim-pulse 11s linear infinite;
+      }
+      @keyframes anim-pulse {
+        0% {
+          transform: scale(0) translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1) translateY(-100px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    }
+  }
+  @keyframes pulseColor {
+    0% {
+      background-color: #f44336;
+    }
+    25% {
+      background-color: #03a9f4;
+    }
+    50% {
+      background-color: #9c27b0;
+    }
+    75% {
+      background-color: #00ff0a;
+    }
+    100% {
+      background-color: #f44336;
+    }
+  }
+
+  .games-style {
+    //@include style;
+    position: absolute;
+    top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+      top: 30px;
+    }
+    .movies {
+      position: relative;
+      padding: 50px;
+      h1 {
+        @include heading-style;
+      }
+      .circle {
+        position: relative;
+        overflow: hidden;
+        img {
+          position: relative;
+          width: 100%;
+          height: auto;
+          border-radius: 50%;
+        }
+      }
+      .circle1 {
+        width: 35%;
+        margin: 25px 5px 15px 5px;
+        float: left;
+        shape-outside: circle();
+      }
+      .circle2 {
+        width: 40%;
+        margin: 80px 0px 75px 5px;
+        float: right;
+        shape-outside: circle();
+      }
+      p {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        text-align: justify;
+      }
+      h3 {
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+        font-family: "Luckiest Guy", cursive;
+      }
+    }
+  }
+}

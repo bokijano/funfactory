@@ -17,15 +17,12 @@
 }
 
 .home-display .music-display {
-  width: 40%;
+  margin-top: 10%;
+  width: 45%;
 }
 
 .home-display .movies-display {
-  width: 50%;
-}
-
-.home-display .games-display {
-  width: 80%;
+  width: 55%;
 }
 
 @media screen and (max-width: 768px) {
@@ -33,8 +30,8 @@
     margin-top: 80px;
   }
   .home-display .music-display,
-  .home-display .movies-display,
-  .home-display .games-display {
+  .home-display .movies-display {
+    margin-top: 0%;
     width: 100%;
   }
 }
@@ -170,15 +167,16 @@
 .container-cloud .home-style .music {
   background-image: url("./pictures/music/music1.png");
   background-repeat: no-repeat;
-  background-position: 90% 90%;
+  background-position: 90% 75%;
   background-size: 40%;
   position: relative;
-  padding: 50px;
+  padding: 50px 5px 5px 5px;
 }
 
 @media screen and (max-width: 768px) {
   .container-cloud .home-style .music {
     background-position: 90% 60%;
+    padding: 50px;
   }
 }
 
@@ -200,38 +198,6 @@
   width: 100%;
   height: auto;
   border-radius: 50%;
-  -webkit-animation: animate-image 5s linear infinite;
-          animation: animate-image 5s linear infinite;
-}
-
-@-webkit-keyframes animate-image {
-  0% {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-  }
-  50% {
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-  }
-  100% {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-  }
-}
-
-@keyframes animate-image {
-  0% {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-  }
-  50% {
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-  }
-  100% {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-  }
 }
 
 .container-cloud .home-style .music .circle1 {
@@ -350,294 +316,5 @@
 .container-cloud .home-style .music h3 {
   text-align: center;
   font-family: "Luckiest Guy", cursive;
-}
-
-@-webkit-keyframes animate-back {
-  0% {
-    background: skyblue;
-  }
-  30% {
-    background: #afafaf;
-  }
-  100% {
-    background: skyblue;
-  }
-}
-
-@keyframes animate-back {
-  0% {
-    background: skyblue;
-  }
-  30% {
-    background: #afafaf;
-  }
-  100% {
-    background: skyblue;
-  }
-}
-
-.container-pulse {
-  position: relative;
-  width: 100% !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.container-pulse .back-pulse {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: #1b1b1b;
-  border: 3px solid whitesmoke;
-  border-radius: 20px;
-  overflow: hidden;
-  -webkit-animation: pulseColor 20s linear infinite;
-          animation: pulseColor 20s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse {
-  width: 100%;
-  height: 100%;
-}
-
-.container-pulse .back-pulse .pulse span {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background: #fff;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(3n + 1) {
-  background: transparent;
-  border: 5px solid #fff;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(1) {
-  top: 50%;
-  left: 20%;
-  -webkit-animation: anim-pulse 10s linear infinite;
-          animation: anim-pulse 10s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(2) {
-  top: 80%;
-  left: 40%;
-  -webkit-animation: anim-pulse 12s linear infinite;
-          animation: anim-pulse 12s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(3) {
-  top: 10%;
-  left: 65%;
-  -webkit-animation: anim-pulse 15s linear infinite;
-          animation: anim-pulse 15s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(4) {
-  top: 50%;
-  left: 70%;
-  -webkit-animation: anim-pulse 6s linear infinite;
-          animation: anim-pulse 6s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(5) {
-  top: 10%;
-  left: 30%;
-  -webkit-animation: anim-pulse 9s linear infinite;
-          animation: anim-pulse 9s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(6) {
-  top: 90%;
-  left: 95%;
-  -webkit-animation: anim-pulse 14s linear infinite;
-          animation: anim-pulse 14s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(7) {
-  top: 80%;
-  left: 5%;
-  -webkit-animation: anim-pulse 8s linear infinite;
-          animation: anim-pulse 8s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(8) {
-  top: 35%;
-  left: 50%;
-  -webkit-animation: anim-pulse 11s linear infinite;
-          animation: anim-pulse 11s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(9) {
-  top: 5%;
-  left: 5%;
-  -webkit-animation: anim-pulse 2s linear infinite;
-          animation: anim-pulse 2s linear infinite;
-}
-
-.container-pulse .back-pulse .pulse span:nth-child(10) {
-  top: 25%;
-  left: 90%;
-  -webkit-animation: anim-pulse 11s linear infinite;
-          animation: anim-pulse 11s linear infinite;
-}
-
-@-webkit-keyframes anim-pulse {
-  0% {
-    -webkit-transform: scale(0) translateY(0) rotate(0deg);
-            transform: scale(0) translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1) translateY(-100px) rotate(360deg);
-            transform: scale(1) translateY(-100px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@keyframes anim-pulse {
-  0% {
-    -webkit-transform: scale(0) translateY(0) rotate(0deg);
-            transform: scale(0) translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1) translateY(-100px) rotate(360deg);
-            transform: scale(1) translateY(-100px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes pulseColor {
-  0% {
-    background-color: #f44336;
-  }
-  25% {
-    background-color: #03a9f4;
-  }
-  50% {
-    background-color: #9c27b0;
-  }
-  75% {
-    background-color: #00ff0a;
-  }
-  100% {
-    background-color: #f44336;
-  }
-}
-
-@keyframes pulseColor {
-  0% {
-    background-color: #f44336;
-  }
-  25% {
-    background-color: #03a9f4;
-  }
-  50% {
-    background-color: #9c27b0;
-  }
-  75% {
-    background-color: #00ff0a;
-  }
-  100% {
-    background-color: #f44336;
-  }
-}
-
-.container-pulse .pulse-style {
-  position: absolute;
-  top: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media screen and (max-width: 768px) {
-  .container-pulse .pulse-style {
-    top: 30px;
-  }
-}
-
-.container-pulse .pulse-style .games {
-  position: relative;
-  padding: 50px;
-}
-
-.container-pulse .pulse-style .games h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "Lemonada", cursive;
-  background-color: #1b1b1b;
-  border-radius: 15px;
-  margin: -50px 0 10px 0;
-  color: rgba(154, 205, 50, 0.4);
-  font-size: 1.5rem;
-  overflow: hidden;
-}
-
-.container-pulse .pulse-style .games h1 span {
-  display: table-cell;
-  margin: 0;
-  padding: 1px;
-  -webkit-animation: head-animate 10s linear infinite;
-          animation: head-animate 10s linear infinite;
-}
-
-.container-pulse .pulse-style .games h1 span:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-.container-pulse .pulse-style .games h1 span:nth-child(2) {
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-}
-
-.container-pulse .pulse-style .games h1 span:nth-child(3) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.container-pulse .pulse-style .games h1 span:nth-child(5) {
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
-}
-
-.container-pulse .pulse-style .games h1 span:nth-child(6) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.container-pulse .pulse-style .games h1 span:nth-child(7) {
-  -webkit-animation-delay: 1.25s;
-          animation-delay: 1.25s;
-}
-
-@keyframes head-animate {
-  0%,
-  100% {
-    color: yellowgreen;
-    text-shadow: 1px 1px 2px yellowgreen;
-    text-transform: uppercase;
-  }
-  50% {
-    color: #111;
-    text-shadow: 0 0 10px none;
-    text-transform: lowercase;
-  }
 }
 /*# sourceMappingURL=Home.css.map */

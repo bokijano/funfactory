@@ -1,4 +1,6 @@
 import React from "react";
+import "./Home.css";
+
 import Cloud1 from "./pictures/clouds/cloud.png";
 import Cloud2 from "./pictures/clouds/cloud2.png";
 import Cloud3 from "./pictures/clouds/cloud3.png";

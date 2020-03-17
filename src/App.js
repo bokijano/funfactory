@@ -9,6 +9,11 @@ class App extends Component {
     loading: true
   };
   componentDidMount = () => {
+    <React.Fragment>
+      <Navbar />
+      <Home />
+    </React.Fragment>;
+
     setTimeout(() => {
       this.setState({
         loading: false
