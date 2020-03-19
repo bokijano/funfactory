@@ -1,0 +1,98 @@
+@import "./../Home/heading";
+@import "./../animate-navbar";
+@import "./../button-style";
+@import "./../media-style";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// music navbar style
+.music-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: whitesmoke;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  a {
+    text-decoration: none;
+  }
+  button {
+    @include button-style;
+  }
+  h1 {
+    cursor: pointer;
+    margin: 0 !important;
+    background-color: transparent !important;
+    @include heading-style;
+  }
+  .navbar-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    a {
+      padding: 1rem 0;
+      margin: 0 3rem;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 2px;
+      color: #333;
+      font-family: "Sigmar One", cursive;
+      &:hover {
+        font-weight: bolder;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        padding: 1px 0;
+        width: 100%;
+        height: 2px;
+        background-color: yellowgreen;
+        left: 0;
+        transform: scaleX(0);
+        transition: all 0.5s linear;
+      }
+      &::before {
+        top: 1px;
+        transform-origin: left;
+      }
+      &::after {
+        bottom: 1px;
+        transform-origin: right;
+      }
+      &:hover::before,
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  .animate-navbar {
+    margin-right: -100%;
+    opacity: 0.1;
+    animation: animate-navbar 2s linear forwards;
+    @keyframes animate-navbar {
+      from {
+        margin-right: -100%;
+        opacity: 0.1;
+      }
+      to {
+        margin-right: 0%;
+        opacity: 1;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    @include media-style;
+  }
+}
+
+// music app style

@@ -1,0 +1,36 @@
+// media screen for mobile navbar
+@mixin media-style {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  .navbar-style {
+    flex-direction: column;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .show-navbar {
+    height: 100%;
+    width: 100%;
+    animation: nav-animate 2s linear forwards;
+  }
+  @keyframes nav-animate {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-left: 10%;
+    &:focus {
+      outline: none;
+    }
+  }
+}

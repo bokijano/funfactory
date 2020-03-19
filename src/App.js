@@ -1,37 +1,32 @@
 import React, { Component } from "react";
-import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
+import MusicPage from "./components/Music/MusicPage";
+
+import { Route, Switch } from "react-router-dom";
 
 import Loader from "./components/Loader/Loader";
 
-class App extends Component {
-  state = {
-    loading: true
-  };
-  componentDidMount = () => {
-    <React.Fragment>
-      <Navbar />
-      <Home />
-    </React.Fragment>;
+import { ProductConsumer } from "./Context";
 
-    setTimeout(() => {
-      this.setState({
-        loading: false
-      });
-    }, 3000);
-  };
+class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        {this.state.loading ? (
-          <Loader />
-        ) : (
-          <article>
-            <Navbar />
-            <Home />
-          </article>
+      <ProductConsumer>
+        {value => (
+          <React.Fragment>
+            {value.loading ? (
+              <Loader />
+            ) : (
+              <article>
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/music" component={MusicPage} />
+                </Switch>
+              </article>
+            )}
+          </React.Fragment>
         )}
-      </React.Fragment>
+      </ProductConsumer>
     );
   }
 }

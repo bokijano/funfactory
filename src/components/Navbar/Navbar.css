@@ -22,6 +22,7 @@
 }
 
 .navbar h1 {
+  margin: 0 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,7 +33,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   font-family: "Lemonada", cursive;
+  background-color: #1b1b1b;
+  border-radius: 15px;
+  margin: -50px 0 10px 0;
   color: rgba(154, 205, 50, 0.4);
+  font-size: 1.5rem;
   overflow: hidden;
 }
 
@@ -75,23 +80,23 @@
 }
 
 .navbar h1 span:nth-child(8) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .navbar h1 span:nth-child(9) {
-  -webkit-animation-delay: 1.75s;
-          animation-delay: 1.75s;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
 }
 
 .navbar h1 span:nth-child(10) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .navbar h1 span:nth-child(11) {
-  -webkit-animation-delay: 2.25s;
-          animation-delay: 2.25s;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
 }
 
 @-webkit-keyframes head-animate {
@@ -226,8 +231,8 @@
   left: -100%;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(yellowgreen));
-  background: linear-gradient(90deg, transparent, yellowgreen);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#1b1b1b));
+  background: linear-gradient(90deg, transparent, #1b1b1b);
   -webkit-animation: animate1 1s linear infinite;
           animation: animate1 1s linear infinite;
 }
@@ -237,8 +242,8 @@
   right: 0;
   width: 2px;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(yellowgreen));
-  background: linear-gradient(180deg, transparent, yellowgreen);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#1b1b1b));
+  background: linear-gradient(90deg, transparent, #1b1b1b);
   -webkit-animation: animate2 1s linear infinite;
           animation: animate2 1s linear infinite;
   -webkit-animation-delay: 0.25s;
@@ -246,12 +251,12 @@
 }
 
 .navbar .navbar-style a span:nth-child(3) {
-  bottom: 0;
   right: -100%;
+  bottom: 0;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(transparent), to(yellowgreen));
-  background: linear-gradient(270deg, transparent, yellowgreen);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#1b1b1b));
+  background: linear-gradient(90deg, transparent, #1b1b1b);
   -webkit-animation: animate3 1s linear infinite;
           animation: animate3 1s linear infinite;
   -webkit-animation-delay: 0.5s;
@@ -259,12 +264,12 @@
 }
 
 .navbar .navbar-style a span:nth-child(4) {
-  bottom: -100%;
   left: 0;
+  bottom: -100%;
   width: 2px;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(yellowgreen));
-  background: linear-gradient(360deg, transparent, yellowgreen);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#1b1b1b));
+  background: linear-gradient(90deg, transparent, #1b1b1b);
   -webkit-animation: animate4 1s linear infinite;
           animation: animate4 1s linear infinite;
   -webkit-animation-delay: 0.75s;
@@ -349,6 +354,11 @@
   100% {
     bottom: 100%;
   }
+}
+
+.navbar .navbar-style a span:nth-child(1), .navbar .navbar-style a span:nth-child(2), .navbar .navbar-style a span:nth-child(3), .navbar .navbar-style a span:nth-child(4) {
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(yellowgreen)) !important;
+  background: linear-gradient(90deg, transparent, yellowgreen) !important;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,5 +1,7 @@
 import React from "react";
 
+import Navbar from "./../Navbar/Navbar";
+
 import Music from "./Music";
 import Movies from "./Movies/Movies";
 import Games from "./Games/Games";
@@ -7,6 +9,7 @@ import Games from "./Games/Games";
 function Home() {
   return (
     <React.Fragment>
+      <Navbar />
       <div className="home-display">
         <div className="music-display">
           <Music />

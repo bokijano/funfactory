@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "https://bokijano.github.io/funfactory",
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
     "@nomoreanalog/react-scripts-eslintless": "2.1.10",
+    "axios": "^0.19.2",
     "gh-pages": "^2.2.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
