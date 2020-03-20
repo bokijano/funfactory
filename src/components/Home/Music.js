@@ -39,7 +39,7 @@ export default class Music extends Component {
             <img src={Cloud1} alt="first cloud" />
           </section>
           <section className="cloud7">
-            <img src={cloud2} alt="second cloud" />
+            <img src={Cloud2} alt="second cloud" />
           </section>
           <section className="cloud8">
             <img src={Cloud3} alt="third cloud" />

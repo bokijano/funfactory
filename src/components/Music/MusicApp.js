@@ -20,7 +20,8 @@ export default class MusicApp extends Component {
   };
   render() {
     return (
-      <React.Fragment style={{ marginTop: "150px" }}>
+      <React.Fragment>
+        <p style={{ marginTop: "150px" }}>Music App</p>
         <SearchBar onFormSubmit={this.handleSubmit} />
         <VideoDetails />
         <VideoList />
