@@ -17,12 +17,12 @@ class App extends Component {
             {value.loading ? (
               <Loader />
             ) : (
-              <article>
+              value.firstOpen ? <Home /> : (
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route path="/music" component={MusicPage} />
                 </Switch>
-              </article>
+              )
             )}
           </React.Fragment>
         )}

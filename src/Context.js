@@ -5,6 +5,7 @@ const ProductContext = React.createContext();
 export default class ProductProvider extends Component {
   state = {
     loading: true,
+    firstOpen: true,
     isOpen: false
   };
   componentDidMount = () => {
@@ -21,7 +22,8 @@ export default class ProductProvider extends Component {
   };
   handleBack = () => {
     this.setState({
-      isOpen: false
+      isOpen: false,
+      firstOpen: false
     });
   };
   render() {
