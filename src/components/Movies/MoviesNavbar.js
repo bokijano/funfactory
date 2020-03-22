@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./MusicPage.css";
+import "./MoviesPage.css";
 import { FaAlignJustify } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "./../../Context";
@@ -9,7 +9,7 @@ export default class MusicNavbar extends Component {
     return (
       <ProductConsumer>
         {value => (
-          <header className="music-navbar">
+          <header className="movies-navbar">
             <Link to="/">
               <h1>
                 <span>f</span>
@@ -28,23 +28,27 @@ export default class MusicNavbar extends Component {
             <button onClick={value.handleToggle}>
               <FaAlignJustify />
             </button>
-            <article
+            <ul
               className={
-                value.isOpen
-                  ? "navbar-style show-navbar"
-                  : "navbar-style animate-navbar"
+                value.isOpen ? "navbar-style show-navbar" : "navbar-style"
               }
             >
-              <Link to="/" onClick={value.handleBack}>
-                Home
-              </Link>
-              <Link to="/movies" onClick={value.handleBack}>
-                Movies
-              </Link>
-              <Link to="#" onClick={value.handleBack}>
-                Games
-              </Link>
-            </article>
+              <li>
+                <Link to="/" onClick={value.handleBack}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/music" onClick={value.handleBack}>
+                  Music
+                </Link>
+              </li>
+              <li>
+                <Link to="#" onClick={value.handleBack}>
+                  Games
+                </Link>
+              </li>
+            </ul>
           </header>
         )}
       </ProductConsumer>

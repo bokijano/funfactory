@@ -38,7 +38,7 @@ export default class Navbar extends Component {
                 <span></span>
                 Music
               </Link>
-              <Link to="#" onClick={value.handleBack}>
+              <Link to="/movies" onClick={value.handleBack}>
                 <span></span>
                 <span></span>
                 <span></span>

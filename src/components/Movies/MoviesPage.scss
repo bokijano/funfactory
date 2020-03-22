@@ -1,0 +1,133 @@
+@import "./../Home/heading";
+@import "./../animate-navbar";
+@import "./../button-style";
+@import "./../media-style";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//movies navbar style
+.movies-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #5b78c7;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  a {
+    text-decoration: none;
+  }
+  button {
+    background: whitesmoke !important;
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke, 0 0 50px whitesmoke,
+      0 0 200px whitesmoke !important;
+    @include button-style;
+  }
+  h1 {
+    cursor: pointer;
+    margin: 0 !important;
+    background-color: transparent !important;
+    color: whitesmoke !important;
+    @include heading-style;
+    span {
+      animation: head-animate1 10s linear infinite !important;
+    }
+    @keyframes head-animate1 {
+      0%,
+      100% {
+        color: whitesmoke !important;
+        text-shadow: 1px 1px 2px white !important;
+        text-transform: uppercase;
+      }
+      50% {
+        color: #111;
+        text-shadow: 0 0 10px none;
+        text-transform: lowercase;
+      }
+    }
+  }
+  .navbar-style {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    li {
+      position: relative;
+      margin: 5px;
+      width: 20vw;
+      height: 100%;
+      display: flex;
+      box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke, 0 0 50px whitesmoke,
+        0 0 200px whitesmoke;
+      @media screen and (max-width: 768px) {
+        width: 50vw;
+      }
+      a {
+        z-index: 1;
+        padding: 1rem 3rem;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        letter-spacing: 2px;
+        color: whitesmoke;
+        font-family: "Luckiest Guy", cursive;
+        text-align: center;
+        &:hover {
+          color: #5b78c7;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          height: 33.33%;
+          width: 0;
+          background-color: whitesmoke;
+          bottom: 66.66%;
+          left: 0;
+          transition: all 0.5s;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 33.33%;
+        width: 0;
+        background-color: whitesmoke;
+        right: 0;
+        z-index: 0;
+        top: 33.33%;
+        transition: all 0.5s;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        height: 33.33%;
+        width: 0;
+        background-color: whitesmoke;
+        left: 0;
+        z-index: 0;
+        bottom: 0;
+        transition: all 0.5s;
+      }
+      &:hover::before,
+      &:hover::after,
+      &:hover a::before {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    @include media-style;
+  }
+}
