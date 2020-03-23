@@ -44,7 +44,7 @@ export default class MusicNavbar extends Component {
                 </Link>
               </li>
               <li>
-                <Link to="#" onClick={value.handleBack}>
+                <Link to="/games" onClick={value.handleBack}>
                   Games
                 </Link>
               </li>

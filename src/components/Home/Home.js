@@ -16,6 +16,8 @@ function Home() {
         </div>
         <div className="movies-display">
           <Movies />
+        </div>
+        <div className="games-display">
           <Games />
         </div>
       </div>

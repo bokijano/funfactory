@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import "./MusicPage.css";
+import { ProductConsumer } from "./../../Context";
 import { FaAlignJustify } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { ProductConsumer } from "./../../Context";
 
-export default class MusicNavbar extends Component {
+export default class GamesNavbar extends Component {
   render() {
     return (
       <ProductConsumer>
         {value => (
-          <header className="music-navbar">
+          <header className="games-navbar">
             <Link to="/">
               <h1>
                 <span>f</span>
@@ -28,23 +27,23 @@ export default class MusicNavbar extends Component {
             <button onClick={value.handleToggle}>
               <FaAlignJustify />
             </button>
-            <article
-              className={
-                value.isOpen
-                  ? "navbar-style show-navbar"
-                  : "navbar-style animate-navbar"
-              }
-            >
-              <Link to="/" onClick={value.handleBack}>
-                Home
-              </Link>
-              <Link to="/movies" onClick={value.handleBack}>
-                Movies
-              </Link>
-              <Link to="/games" onClick={value.handleBack}>
-                Games
-              </Link>
-            </article>
+            <ul className={value.isOpen ? "show-navbar" : null}>
+              <li>
+                <Link to="/" onClick={value.handleBack}>
+                  <span></span>Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/music" onClick={value.handleBack}>
+                  <span></span>Music
+                </Link>
+              </li>
+              <li>
+                <Link to="/movies" onClick={value.handleBack}>
+                  <span></span>Movies
+                </Link>
+              </li>
+            </ul>
           </header>
         )}
       </ProductConsumer>

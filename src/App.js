@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Home from "./components/Home/Home";
 import MusicPage from "./components/Music/MusicPage";
 import MoviesPage from "./components/Movies/MoviesPage";
+import GamesPage from "./components/Games/GamesPage";
 
 import { Route, Switch } from "react-router-dom";
 
@@ -17,14 +18,15 @@ class App extends Component {
           <React.Fragment>
             {value.loading ? (
               <Loader />
+            ) : value.firstOpen ? (
+              <Home />
             ) : (
-              value.firstOpen ? <Home /> : (
-                <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/music" component={MusicPage} />
-                  <Route path="/movies" component={MoviesPage} />
-                </Switch>
-              )
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/music" component={MusicPage} />
+                <Route path="/movies" component={MoviesPage} />
+                <Route path="/games" component={GamesPage} />
+              </Switch>
             )}
           </React.Fragment>
         )}

@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.games-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e2e2af;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.games-navbar a {
+  text-decoration: none;
+}
+
+.games-navbar h1 {
+  cursor: pointer;
+  margin: 0 !important;
+  background-color: transparent !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Lemonada", cursive;
+  background-color: #1b1b1b;
+  border-radius: 15px;
+  margin: -50px 0 10px 0;
+  color: rgba(154, 205, 50, 0.4);
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.games-navbar h1 span {
+  display: table-cell;
+  margin: 0;
+  padding: 1px;
+  -webkit-animation: head-animate 10s linear infinite;
+          animation: head-animate 10s linear infinite;
+}
+
+.games-navbar h1 span:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.games-navbar h1 span:nth-child(2) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.games-navbar h1 span:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.games-navbar h1 span:nth-child(5) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.games-navbar h1 span:nth-child(6) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.games-navbar h1 span:nth-child(7) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.games-navbar h1 span:nth-child(8) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.games-navbar h1 span:nth-child(9) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.games-navbar h1 span:nth-child(10) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.games-navbar h1 span:nth-child(11) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+@-webkit-keyframes head-animate {
+  0%,
+  100% {
+    color: yellowgreen;
+    text-shadow: 1px 1px 2px yellowgreen;
+    text-transform: uppercase;
+  }
+  50% {
+    color: #111;
+    text-shadow: 0 0 10px none;
+    text-transform: lowercase;
+  }
+}
+
+@keyframes head-animate {
+  0%,
+  100% {
+    color: yellowgreen;
+    text-shadow: 1px 1px 2px yellowgreen;
+    text-transform: uppercase;
+  }
+  50% {
+    color: #111;
+    text-shadow: 0 0 10px none;
+    text-transform: lowercase;
+  }
+}
+
+.games-navbar button {
+  background: yellowgreen;
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px #717e57, 0 0 200px yellowgreen;
+          box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px #717e57, 0 0 200px yellowgreen;
+  border: none;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  font-size: 2rem;
+  -webkit-animation: btn-animate 2s linear infinite;
+          animation: btn-animate 2s linear infinite;
+}
+
+@-webkit-keyframes btn-animate {
+  0% {
+    font-size: 2rem;
+  }
+  25% {
+    font-size: 2.1rem;
+  }
+  50% {
+    font-size: 2.2rem;
+  }
+  75% {
+    font-size: 2.1rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+@keyframes btn-animate {
+  0% {
+    font-size: 2rem;
+  }
+  25% {
+    font-size: 2.1rem;
+  }
+  50% {
+    font-size: 2.2rem;
+  }
+  75% {
+    font-size: 2.1rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+.games-navbar ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.games-navbar ul li {
+  margin: 10px 20px;
+  width: 15vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .games-navbar ul li {
+    width: 40vw;
+  }
+}
+
+.games-navbar ul li a {
+  position: relative;
+  padding: 10px 20px;
+  color: #333;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 100%;
+  height: 100%;
+  font-family: "Caveat Brush", cursive;
+  border: 2px solid #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.games-navbar ul li a span::before,
+.games-navbar ul li a span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.games-navbar ul li a span::before {
+  border-bottom: 2px solid #333;
+  border-left: 2px solid #333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 6px;
+  left: -8px;
+}
+
+.games-navbar ul li a:hover span::before {
+  border-bottom: 2px solid #748f3f;
+  border-left: 2px solid #748f3f;
+  left: -30px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-animation: animateBefore 0.5s linear infinite;
+          animation: animateBefore 0.5s linear infinite;
+}
+
+.games-navbar ul li a span::after {
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 6px;
+  right: -8px;
+}
+
+.games-navbar ul li a:hover span::after {
+  border-top: 2px solid #748f3f;
+  border-right: 2px solid #748f3f;
+  right: -30px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-animation: animateAfter 0.5s linear infinite;
+          animation: animateAfter 0.5s linear infinite;
+}
+
+.games-navbar ul li a:hover {
+  border-radius: 30px;
+  border: 3px solid yellowgreen;
+  color: yellowgreen;
+  text-shadow: 1px 1px 2px whitesmoke;
+  background-color: #333;
+  -webkit-box-shadow: 2px 2px 4px #333;
+          box-shadow: 2px 2px 4px #333;
+}
+
+@-webkit-keyframes animateBefore {
+  0% {
+    left: -30px;
+  }
+  50% {
+    left: -15%;
+  }
+  100% {
+    left: -30px;
+  }
+}
+
+@keyframes animateBefore {
+  0% {
+    left: -30px;
+  }
+  50% {
+    left: -15%;
+  }
+  100% {
+    left: -30px;
+  }
+}
+
+@-webkit-keyframes animateAfter {
+  0% {
+    right: -30px;
+  }
+  50% {
+    right: -15%;
+  }
+  100% {
+    right: -30px;
+  }
+}
+
+@keyframes animateAfter {
+  0% {
+    right: -30px;
+  }
+  50% {
+    right: -15%;
+  }
+  100% {
+    right: -30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .games-navbar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0;
+  }
+  .games-navbar .navbar-style {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .games-navbar .show-navbar {
+    height: 100%;
+    width: 100%;
+    -webkit-animation: nav-animate 2s linear forwards;
+            animation: nav-animate 2s linear forwards;
+  }
+  @-webkit-keyframes nav-animate {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes nav-animate {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .games-navbar button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    float: right;
+    margin-left: 10%;
+  }
+  .games-navbar button:focus {
+    outline: none;
+  }
+  .games-navbar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+/*# sourceMappingURL=GamesPage.css.map */
