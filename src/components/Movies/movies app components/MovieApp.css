@@ -1,0 +1,116 @@
+.app-style {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-style .welcome-style {
+  font-family: "Luckiest Guy", cursive;
+}
+
+.app-style .welcome-style h2 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.app-style .welcome-style h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.app-style form {
+  width: 90%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Acme", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .app-style form {
+    width: 50%;
+  }
+}
+
+.app-style form button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.app-style .movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.app-style .movie .no-display {
+  display: none;
+}
+
+.app-style .movie .searched-movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  width: 40%;
+  -webkit-box-shadow: 3px 3px 6px lightgray;
+          box-shadow: 3px 3px 6px lightgray;
+}
+
+@media screen and (max-width: 768px) {
+  .app-style .movie .searched-movie {
+    width: 90%;
+  }
+}
+
+.app-style .movie .searched-movie img {
+  width: 33%;
+}
+
+.app-style .movie .searched-movie .about-style {
+  width: 60%;
+}
+
+.app-style .movie .searched-movie .about-style h2 {
+  font-family: "Luckiest Guy", cursive;
+  padding-bottom: 5px;
+}
+
+.app-style .movie .searched-movie .about-style p {
+  text-align: justify;
+  font-family: "Patrick Hand", cursive;
+}
+/*# sourceMappingURL=MovieApp.css.map */

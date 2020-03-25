@@ -1,0 +1,75 @@
+// movies page app styling
+.app-style {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .welcome-style {
+    font-family: "Luckiest Guy", cursive;
+    h2 {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+  form {
+    width: 90%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Acme", sans-serif;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+    button {
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+  }
+  .movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    .no-display {
+      display: none;
+    }
+    .display-msg {
+      display: block;
+      font-family: "Luckiest Guy", cursive;
+    }
+    .searched-movie {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      margin: 5px 0;
+      width: 40%;
+      box-shadow: 3px 3px 6px lightgray;
+      @media screen and (max-width: 768px) {
+        width: 90%;
+      }
+      img {
+        width: 33%;
+      }
+      .about-style {
+        width: 60%;
+        h2 {
+          font-family: "Luckiest Guy", cursive;
+          padding-bottom: 5px;
+        }
+        p {
+          text-align: justify;
+          font-family: "Patrick Hand", cursive;
+        }
+      }
+    }
+  }
+}

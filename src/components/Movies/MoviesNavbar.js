@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./MoviesPage.css";
 import { FaAlignJustify } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "./../../Context";
