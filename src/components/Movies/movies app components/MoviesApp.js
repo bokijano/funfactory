@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./MovieApp.css";
 import { ProductConsumer } from "./../../../Context";
+import Section from "./moviesSection";
 import { FaSearch } from "react-icons/fa";
-
-import { TextField } from "@material-ui/core";
 
 export default class MoviesApp extends Component {
   render() {
@@ -12,27 +11,29 @@ export default class MoviesApp extends Component {
         <ProductConsumer>
           {value => (
             <article className="app-style">
-              <section className="welcome-style">
-                <h2>WELCOME</h2>
-                <h2>TO</h2>
-                <h1>
-                  <span>M</span>
-                  <span>O</span>
-                  <span>V</span>
-                  <span>I</span>
-                  <span>E</span>
-                  <span> </span>
-                  <span>A</span>
-                  <span>P</span>
-                  <span>P</span>
+              <div className="welcome-style">
+                <h1 onClick={value.handleBack}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  MOVIE APPLICATION
                 </h1>
-                <h4>Search for your favourite movie</h4>
-              </section>
-              <form onSubmit={value.handleSubmit} className="form-style">
-                <TextField fullWidth onChange={value.handleChange} />
-                <button type="submit">
-                  <FaSearch />
-                </button>
+                <Section value={value} />
+              </div>
+              <form onSubmit={value.handleSubmit}>
+                <h3>Search for your favourite movie</h3>
+                <section className="form-style">
+                  <input
+                    className="text-field"
+                    type="text"
+                    value={value.searchMovie}
+                    onChange={value.handleChange}
+                  />
+                  <button type="submit">
+                    <FaSearch />
+                  </button>
+                </section>
               </form>
               <div className="movie">
                 {value.movies.map(movie => {
