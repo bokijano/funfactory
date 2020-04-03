@@ -7,29 +7,33 @@ export default function moviesSection(props) {
       className={props.value.movieSectDisplay ? "movie-list" : "no-display"}
     >
       <div className="container-movies">
-        <h3>Now Playing Movies</h3>
+        <h1>Now Playing Movies</h1>
         <Container
+          displayDetails={props.value.displayDetails}
           containers={props.value.nowPlaying}
           imgURL={props.value.imageURL}
         />
       </div>
       <div className="container-movies">
-        <h3>Popular Movies</h3>
+        <h1>Popular Movies</h1>
         <Container
+          displayDetails={props.value.displayDetails}
           containers={props.value.popular}
           imgURL={props.value.imageURL}
         />
       </div>
       <div className="container-movies">
-        <h3>Top Rated Movies</h3>
+        <h1>Top Rated Movies</h1>
         <Container
+          displayDetails={props.value.displayDetails}
           containers={props.value.topRated}
           imgURL={props.value.imageURL}
         />
       </div>
       <div className="container-movies">
-        <h3>Upcoming Movies</h3>
+        <h1>Upcoming Movies</h1>
         <Container
+          displayDetails={props.value.displayDetails}
           containers={props.value.upcoming}
           imgURL={props.value.imageURL}
         />

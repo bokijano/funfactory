@@ -1,9 +1,16 @@
 import React from "react";
+import DisplayModal from "./displayModal";
 
 export default function SearchedMovies(props) {
   return (
     <div className={props.value.movieSectDisplay ? "no-display" : "movie"}>
-      {props.value.movies.map(movie => {
+      <div className={props.value.modalDisplay ? "modal" : "no-display"}>
+        <DisplayModal
+          value={props.value}
+          removeModal={props.value.removeModal}
+        />
+      </div>
+      {props.value.movies.map((movie) => {
         return (
           <div
             key={movie.id}
@@ -19,6 +26,13 @@ export default function SearchedMovies(props) {
             <section className="about-style">
               <h2>{movie.title}</h2>
               <p>{movie.overview}</p>
+              <button
+                className="more-details"
+                data-movie-id={movie.id}
+                onClick={props.value.displayDetails}
+              >
+                more details
+              </button>
             </section>
           </div>
         );

@@ -14,20 +14,26 @@ export default class ProductProvider extends Component {
     searchMovie: "",
     findMovie: false,
     imageURL: "https://image.tmdb.org/t/p/w500",
-    movieID: "",
-    actors: [],
     path: [
       "/movie/popular",
       "/movie/now_playing",
       "/movie/top_rated",
-      "/movie/upcoming"
+      "/movie/upcoming",
     ],
     moviesContainer: [],
     popular: [],
     nowPlaying: [],
     topRated: [],
     upcoming: [],
-    movieSectDisplay: true
+    movieSectDisplay: true,
+    modalDisplay: false,
+    movieID: "",
+    details: "",
+    actors: [],
+    trailer: "",
+    date: "",
+    genre: "",
+    trailerURL: "https://www.youtube.com/embed/",
   };
   // generate url
   generateUrl(path) {
@@ -43,7 +49,7 @@ export default class ProductProvider extends Component {
     const movies = jsonData.results.slice(0, 5);
 
     this.setState({
-      popular: movies
+      popular: movies,
     });
   }
   // fetch now playing movies
@@ -55,7 +61,7 @@ export default class ProductProvider extends Component {
     const movies = jsonData.results.slice(0, 5);
 
     this.setState({
-      nowPlaying: movies
+      nowPlaying: movies,
     });
   }
   // fetch top rated movies
@@ -67,7 +73,7 @@ export default class ProductProvider extends Component {
     const movies = jsonData.results.slice(0, 5);
 
     this.setState({
-      topRated: movies
+      topRated: movies,
     });
   }
   // fetch upcoming movies
@@ -77,26 +83,9 @@ export default class ProductProvider extends Component {
     const jsonData = await data.json();
 
     const movies = jsonData.results.slice(0, 5);
-    console.log(movies[0].id);
 
     this.setState({
-      upcoming: movies
-    });
-  }
-  // fetch actors in movies
-  async getMovieCrew(movieID) {
-    const crew = `/movie/${movieID}/credits`;
-    const crewUrl = this.generateUrl(crew);
-
-    const data = await fetch(crewUrl);
-    const jsonData = await data.json();
-
-    const actors = jsonData.cast;
-
-    const mainActors = [actors[0], actors[1], actors[2]];
-
-    this.setState({
-      actors: mainActors
+      upcoming: movies,
     });
   }
   // fetch search movies
@@ -107,21 +96,80 @@ export default class ProductProvider extends Component {
     const jsonData = await data.json();
 
     const movieResult = jsonData.results;
-    //for (let i = 0; i < movieResult.length; i++) {
-    //  this.getMovieCrew(movieResult[i].id);
-    //}
     if (movieResult != 0) {
       this.setState({
         movies: movieResult,
-        findMovie: false
+        findMovie: false,
       });
     } else {
       this.setState({
         movies: [],
-        findMovie: true
+        findMovie: true,
       });
     }
   }
+  // display modal with movie details when click on image or button
+  handleError = (error) => {
+    console.log(error);
+  };
+  displayDetails = (event) => {
+    const target = event.target;
+
+    if (
+      target.tagName.toLowerCase() === "img" ||
+      target.tagName.toLowerCase() === "button"
+    ) {
+      const movieID = target.dataset.movieId;
+
+      // fetch movie details
+      const details = this.generateUrl(`/movie/${movieID}`);
+      fetch(details)
+        .then((res) => res.json())
+        .then((data) => {
+          this.setState({
+            details: data,
+            date: data.release_date.substring(0, 4),
+            genre: [data.genres[0].name, data.genres[1].name],
+          });
+        })
+        .catch(this.handleError);
+
+      // fetch actors
+      const crew = this.generateUrl(`/movie/${movieID}/credits`);
+      fetch(crew)
+        .then((res) => res.json())
+        .then((data) => {
+          this.setState({
+            actors: [data.cast[0], data.cast[1], data.cast[2]],
+          });
+        })
+        .catch(this.handleError);
+
+      // fetch trailer
+      const trailer = this.generateUrl(`/movie/${movieID}/videos`);
+      fetch(trailer)
+        .then((res) => res.json())
+        .then((data) => {
+          this.setState({
+            trailer: data.results[0].key,
+          });
+        })
+        .catch(this.handleError);
+      this.setState({
+        modalDisplay: true,
+      });
+    }
+  };
+  removeModal = () => {
+    this.setState({
+      modalDisplay: false,
+      details: "",
+      actors: [],
+      trailer: "",
+      date: "",
+      genre: "",
+    });
+  };
   // setTimeout 3s on loading page and fetch data functions
   componentDidMount = () => {
     this.getPopularMovies();
@@ -131,35 +179,35 @@ export default class ProductProvider extends Component {
     console.log();
     setTimeout(() => {
       this.setState({
-        loading: false
+        loading: false,
       });
     }, 3000);
   };
   // function for open pages
   handleToggle = () => {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   };
   handleBack = () => {
     this.setState({
       isOpen: false,
       firstOpen: false,
-      movieSectDisplay: true
+      movieSectDisplay: true,
     });
   };
   // form function for search movies
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      searchMovie: e.target.value
+      searchMovie: e.target.value,
     });
   };
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.getMoviesData(this.state.searchMovie);
     this.setState({
       searchMovie: "",
-      movieSectDisplay: false
+      movieSectDisplay: false,
     });
   };
   render() {
@@ -170,7 +218,9 @@ export default class ProductProvider extends Component {
           handleToggle: this.handleToggle,
           handleBack: this.handleBack,
           handleChange: this.handleChange,
-          handleSubmit: this.handleSubmit
+          handleSubmit: this.handleSubmit,
+          displayDetails: this.displayDetails,
+          removeModal: this.removeModal,
         }}
       >
         {this.props.children}

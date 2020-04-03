@@ -3,6 +3,8 @@ import "./MovieApp.css";
 import { ProductConsumer } from "./../../../Context";
 import Section from "./moviesSection";
 import SearchedMovies from "./SearchedMovies";
+import DisplayModal from "./displayModal";
+
 import { FaSearch } from "react-icons/fa";
 
 export default class MoviesApp extends Component {
@@ -10,9 +12,13 @@ export default class MoviesApp extends Component {
     return (
       <React.Fragment>
         <ProductConsumer>
-          {value => (
+          {(value) => (
             <article className="app-style">
-              <div className="welcome-style">
+              <div className={value.modalDisplay ? "modal" : "no-display"}>
+                <DisplayModal value={value} removeModal={value.removeModal} />
+              </div>
+
+              <section className="welcome-style">
                 <h1 onClick={value.handleBack}>
                   <span></span>
                   <span></span>
@@ -20,8 +26,10 @@ export default class MoviesApp extends Component {
                   <span></span>
                   MOVIE APPLICATION
                 </h1>
-                <Section value={value} />
-              </div>
+              </section>
+
+              <Section value={value} />
+
               <form onSubmit={value.handleSubmit}>
                 <h3>Search for your favourite movie</h3>
                 <section className="form-style">

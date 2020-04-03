@@ -9,6 +9,8 @@ export default function moviesContainer(props) {
             key={container.id}
             src={props.imgURL + container.poster_path}
             alt="container picture"
+            data-movie-id={container.id}
+            onClick={props.displayDetails}
           />
         );
       })}
