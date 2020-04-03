@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "d5ded0e4cf614988a828",
-    "url": "/funfactory/static/css/main.8bb76834.chunk.css"
+    "revision": "dea1058a338f149a1f3c",
+    "url": "/funfactory/static/css/main.e1001aac.chunk.css"
   },
   {
-    "revision": "d5ded0e4cf614988a828",
-    "url": "/funfactory/static/js/main.d5ded0e4.chunk.js"
+    "revision": "dea1058a338f149a1f3c",
+    "url": "/funfactory/static/js/main.dea1058a.chunk.js"
   },
   {
     "revision": "9467019640c34757fc1d",
     "url": "/funfactory/static/js/runtime~main.94670196.js"
   },
   {
-    "revision": "ee78a213f0042d31bba9",
-    "url": "/funfactory/static/js/2.ee78a213.chunk.js"
+    "revision": "0ee94939bdfceb09c8dd",
+    "url": "/funfactory/static/js/2.0ee94939.chunk.js"
   },
   {
     "revision": "48e2daf2b08490ee6805af500996d2a0",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/funfactory/static/media/music1.be24f6f2.png"
   },
   {
-    "revision": "7a25fc1c3f5dcd0cb2574e7a28b7ce64",
+    "revision": "3caaef22a6445004da91480c7e4b9920",
     "url": "/funfactory/index.html"
   }
 ];
