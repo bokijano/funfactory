@@ -296,6 +296,10 @@
   outline: none;
 }
 
+.app-style .no-display {
+  display: none;
+}
+
 .app-style .movie {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -41,7 +41,6 @@ export default class ProductProvider extends Component {
     const jsonData = await data.json();
 
     const movies = jsonData.results.slice(0, 5);
-    console.log(movies);
 
     this.setState({
       popular: movies
@@ -95,7 +94,6 @@ export default class ProductProvider extends Component {
     const actors = jsonData.cast;
 
     const mainActors = [actors[0], actors[1], actors[2]];
-    console.log(mainActors);
 
     this.setState({
       actors: mainActors
@@ -109,13 +107,20 @@ export default class ProductProvider extends Component {
     const jsonData = await data.json();
 
     const movieResult = jsonData.results;
-    for (let i = 0; i < movieResult.length; i++) {
-      this.getMovieCrew(movieResult[i].id);
+    //for (let i = 0; i < movieResult.length; i++) {
+    //  this.getMovieCrew(movieResult[i].id);
+    //}
+    if (movieResult != 0) {
+      this.setState({
+        movies: movieResult,
+        findMovie: false
+      });
+    } else {
+      this.setState({
+        movies: [],
+        findMovie: true
+      });
     }
-
-    this.setState({
-      movies: movieResult
-    });
   }
   // setTimeout 3s on loading page and fetch data functions
   componentDidMount = () => {

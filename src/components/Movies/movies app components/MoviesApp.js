@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./MovieApp.css";
 import { ProductConsumer } from "./../../../Context";
 import Section from "./moviesSection";
+import SearchedMovies from "./SearchedMovies";
 import { FaSearch } from "react-icons/fa";
 
 export default class MoviesApp extends Component {
@@ -35,34 +36,7 @@ export default class MoviesApp extends Component {
                   </button>
                 </section>
               </form>
-              <div className="movie">
-                {value.movies.map(movie => {
-                  return (
-                    <div
-                      key={movie.id}
-                      className={
-                        movie.poster_path !== null
-                          ? "searched-movie"
-                          : "no-display"
-                      }
-                    >
-                      <img
-                        src={value.imageURL + movie.poster_path}
-                        data-movie-id={movie.id}
-                      />
-
-                      <section className="about-style">
-                        <h2>{movie.title}</h2>
-                        <p>{movie.overview}</p>
-                      </section>
-                    </div>
-                  );
-                })}
-
-                <h2 className={value.findMovie ? "display-msg" : "no-display"}>
-                  No Movies Match Your Search
-                </h2>
-              </div>
+              <SearchedMovies value={value} />
             </article>
           )}
         </ProductConsumer>
