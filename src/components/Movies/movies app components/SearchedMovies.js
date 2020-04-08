@@ -26,13 +26,6 @@ export default function SearchedMovies(props) {
             <section className="about-style">
               <h2>{movie.title}</h2>
               <p>{movie.overview}</p>
-              <button
-                className="more-details"
-                data-movie-id={movie.id}
-                onClick={props.value.displayDetails}
-              >
-                more details
-              </button>
             </section>
           </div>
         );

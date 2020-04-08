@@ -5,10 +5,11 @@ export default function displayModal(props) {
     removeModal,
     imageURL,
     date,
-    genre,
     actors,
     trailer,
     trailerURL,
+    genre1,
+    genre2,
   } = props.value;
   const { poster_path, title, tagline, overview } = props.value.details;
   return (
@@ -17,14 +18,14 @@ export default function displayModal(props) {
         &times;
       </p>
       <div className="movies-style">
-        <img src={imageURL + poster_path} alt="modal picture" />
+        <img src={imageURL + poster_path} alt="" />
         <section className="modals-details">
           <h2 id="modal-title">
-            {title} ({date})
+            {title} {date}
           </h2>
           <h3>{tagline}</h3>
           <h2 id="modal-genre">
-            {genre[0]} {genre[1]}
+            {genre1} {genre2}
           </h2>
           <p>{overview}</p>
         </section>
@@ -41,7 +42,7 @@ export default function displayModal(props) {
           );
         })}
       </div>
-      <div className="trailer">
+      <div className={trailer ? "trailer" : "no-display"}>
         <iframe
           src={trailerURL + trailer}
           frameBorder="0"

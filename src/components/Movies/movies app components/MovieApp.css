@@ -105,6 +105,10 @@
   padding: 5px 0px 10px 5px;
 }
 
+.app-style .modal .modal-content .movies-style .modals-details #no-display {
+  display: none;
+}
+
 .app-style .modal .modal-content .movies-style .modals-details p {
   text-align: justify;
   font-family: "Carter One", cursive;
@@ -133,6 +137,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.app-style .modal .modal-content .actors .no-display {
+  display: none;
 }
 
 .app-style .modal .modal-content .actors .actor-char {
@@ -175,6 +183,10 @@
 
 .app-style .modal .modal-content .trailer {
   margin: 20px auto;
+}
+
+.app-style .modal .modal-content .no-display {
+  display: none;
 }
 
 .app-style .welcome-style {
@@ -572,6 +584,10 @@
   padding: 5px 0px 10px 5px;
 }
 
+.app-style .movie .modal .modal-content .movies-style .modals-details #no-display {
+  display: none;
+}
+
 .app-style .movie .modal .modal-content .movies-style .modals-details p {
   text-align: justify;
   font-family: "Carter One", cursive;
@@ -600,6 +616,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.app-style .movie .modal .modal-content .actors .no-display {
+  display: none;
 }
 
 .app-style .movie .modal .modal-content .actors .actor-char {
@@ -642,6 +662,10 @@
 
 .app-style .movie .modal .modal-content .trailer {
   margin: 20px auto;
+}
+
+.app-style .movie .modal .modal-content .no-display {
+  display: none;
 }
 
 .app-style .movie .no-display {
@@ -692,6 +716,10 @@
 .app-style .movie .searched-movie .about-style p {
   text-align: justify;
   font-family: "Patrick Hand", cursive;
+}
+
+.app-style .movie .searched-movie .about-style .no-display {
+  display: none;
 }
 
 .app-style .movie .searched-movie .about-style .more-details {

@@ -32,7 +32,8 @@ export default class ProductProvider extends Component {
     actors: [],
     trailer: "",
     date: "",
-    genre: "",
+    genre1: "",
+    genre2: "",
     trailerURL: "https://www.youtube.com/embed/",
   };
   // generate url
@@ -126,10 +127,13 @@ export default class ProductProvider extends Component {
       fetch(details)
         .then((res) => res.json())
         .then((data) => {
+          const genre1 = data.genres[1].name;
+          const genre2 = data.genres[2].name;
           this.setState({
             details: data,
-            date: data.release_date.substring(0, 4),
-            genre: [data.genres[0].name, data.genres[1].name],
+            date: `(${data.release_date.substring(0, 4)})`,
+            genre1: genre1,
+            genre2: genre2,
           });
         })
         .catch(this.handleError);
@@ -139,8 +143,9 @@ export default class ProductProvider extends Component {
       fetch(crew)
         .then((res) => res.json())
         .then((data) => {
+          const actors = [data.cast[0], data.cast[1], data.cast[2]];
           this.setState({
-            actors: [data.cast[0], data.cast[1], data.cast[2]],
+            actors: actors,
           });
         })
         .catch(this.handleError);
@@ -150,8 +155,10 @@ export default class ProductProvider extends Component {
       fetch(trailer)
         .then((res) => res.json())
         .then((data) => {
+          const video = data.results[0].key;
+
           this.setState({
-            trailer: data.results[0].key,
+            trailer: video,
           });
         })
         .catch(this.handleError);
@@ -167,7 +174,8 @@ export default class ProductProvider extends Component {
       actors: [],
       trailer: "",
       date: "",
-      genre: "",
+      genre1: "",
+      genre2: "",
     });
   };
   // setTimeout 3s on loading page and fetch data functions

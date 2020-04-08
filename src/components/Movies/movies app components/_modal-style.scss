@@ -60,6 +60,9 @@
           font-family: "Lemonada", cursive;
           padding: 5px 0px 10px 5px;
         }
+        #no-display {
+          display: none;
+        }
         p {
           text-align: justify;
           font-family: "Carter One", cursive;
@@ -81,6 +84,9 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+      .no-display {
+        display: none;
+      }
       .actor-char {
         width: 30%;
         padding: 10px 5px;
@@ -107,6 +113,9 @@
     }
     .trailer {
       margin: 20px auto;
+    }
+    .no-display {
+      display: none;
     }
   }
 }
