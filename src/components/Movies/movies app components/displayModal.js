@@ -8,8 +8,7 @@ export default function displayModal(props) {
     actors,
     trailer,
     trailerURL,
-    genre1,
-    genre2,
+    genres,
   } = props.value;
   const { poster_path, title, tagline, overview } = props.value.details;
   return (
@@ -25,7 +24,7 @@ export default function displayModal(props) {
           </h2>
           <h3>{tagline}</h3>
           <h2 id="modal-genre">
-            {genre1} {genre2}
+            {genres[0]} {genres[1]}
           </h2>
           <p>{overview}</p>
         </section>

@@ -32,8 +32,7 @@ export default class ProductProvider extends Component {
     actors: [],
     trailer: "",
     date: "",
-    genre1: "",
-    genre2: "",
+    genres: "",
     trailerURL: "https://www.youtube.com/embed/",
   };
   // generate url
@@ -127,13 +126,11 @@ export default class ProductProvider extends Component {
       fetch(details)
         .then((res) => res.json())
         .then((data) => {
-          const genre1 = data.genres[1].name;
-          const genre2 = data.genres[2].name;
+          console.log(data);
           this.setState({
             details: data,
             date: `(${data.release_date.substring(0, 4)})`,
-            genre1: genre1,
-            genre2: genre2,
+            genres: [data.genres[0].name, data.genres[1].name],
           });
         })
         .catch(this.handleError);
@@ -174,8 +171,7 @@ export default class ProductProvider extends Component {
       actors: [],
       trailer: "",
       date: "",
-      genre1: "",
-      genre2: "",
+      genres: "",
     });
   };
   // setTimeout 3s on loading page and fetch data functions
