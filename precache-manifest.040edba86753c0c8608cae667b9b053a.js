@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "dbb3936d5e272a1bbd99",
-    "url": "/funfactory/static/css/main.ef26fee9.chunk.css"
+    "revision": "a1fa1015c618d337ca21",
+    "url": "/funfactory/static/css/main.ebf8bdd1.chunk.css"
   },
   {
-    "revision": "dbb3936d5e272a1bbd99",
-    "url": "/funfactory/static/js/main.dbb3936d.chunk.js"
+    "revision": "a1fa1015c618d337ca21",
+    "url": "/funfactory/static/js/main.a1fa1015.chunk.js"
   },
   {
     "revision": "9467019640c34757fc1d",
     "url": "/funfactory/static/js/runtime~main.94670196.js"
   },
   {
-    "revision": "3509341671b528a1e5f0",
-    "url": "/funfactory/static/js/2.35093416.chunk.js"
+    "revision": "29f5b295c4061ccd207f",
+    "url": "/funfactory/static/js/2.29f5b295.chunk.js"
+  },
+  {
+    "revision": "6abbc9bdd00396ddc0db648f00f81428",
+    "url": "/funfactory/static/media/hotdog.6abbc9bd.png"
   },
   {
     "revision": "48e2daf2b08490ee6805af500996d2a0",
@@ -60,6 +64,34 @@ self.__precacheManifest = [
     "url": "/funfactory/static/media/leaf7.977e01a8.png"
   },
   {
+    "revision": "9e8c260e55eb25e6b41fd9c81a07347e",
+    "url": "/funfactory/static/media/cheeseburger.9e8c260e.png"
+  },
+  {
+    "revision": "4da3149b9f0377ed34f3798c61d2d847",
+    "url": "/funfactory/static/media/fries.4da3149b.png"
+  },
+  {
+    "revision": "3d98184cf5290592ece322db8515fd5a",
+    "url": "/funfactory/static/media/ice-cream.3d98184c.png"
+  },
+  {
+    "revision": "c27846db0a7d3ecea4867205f1807bae",
+    "url": "/funfactory/static/media/lemon.c27846db.png"
+  },
+  {
+    "revision": "b719185e8f2e5380db6aa6e83d640cdd",
+    "url": "/funfactory/static/media/milkshake.b719185e.png"
+  },
+  {
+    "revision": "91cc93fd97a9659fe837584f61816606",
+    "url": "/funfactory/static/media/pizza.91cc93fd.png"
+  },
+  {
+    "revision": "0fcd6de04756e4b9a7e67d72a7d16706",
+    "url": "/funfactory/static/media/salad.0fcd6de0.png"
+  },
+  {
     "revision": "d0265401ccd5ee77d74feb2de13d8216",
     "url": "/funfactory/static/media/music2.d0265401.jpg"
   },
@@ -88,11 +120,27 @@ self.__precacheManifest = [
     "url": "/funfactory/static/media/games2.9ce5f3f1.jpg"
   },
   {
+    "revision": "474d13e218f3e879224eac5ff8279ea4",
+    "url": "/funfactory/static/media/sport.474d13e2.png"
+  },
+  {
+    "revision": "3618f643f5cbaf21908bcaf6dda98399",
+    "url": "/funfactory/static/media/cards.3618f643.png"
+  },
+  {
+    "revision": "adc481e0f457c1eb8c8682eab6b47764",
+    "url": "/funfactory/static/media/actors.adc481e0.png"
+  },
+  {
+    "revision": "e106c603cf12942ac91e7a4296795ef6",
+    "url": "/funfactory/static/media/blank.e106c603.png"
+  },
+  {
     "revision": "be24f6f2ace9b1cbc4283128c435e564",
     "url": "/funfactory/static/media/music1.be24f6f2.png"
   },
   {
-    "revision": "d55793ca30f1893340166d5bfef3f03d",
+    "revision": "b6a91cc40831bd2e50f1fb18ed97bf0f",
     "url": "/funfactory/index.html"
   }
 ];
