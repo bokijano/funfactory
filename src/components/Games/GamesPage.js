@@ -1,15 +1,14 @@
 import React from "react";
 import "./GamesPage.css";
 import GamesNavbar from "./GamesNavbar";
-import Progress from "./../Loader/Progress";
+//import Progress from "./../Loader/Progress";
+import GamesBoard from "./GamesBoard";
 
 export default function GamesPage() {
   return (
     <React.Fragment>
       <GamesNavbar />
-      <div style={{ marginTop: "200px" }}>
-        <Progress />
-      </div>
+      <GamesBoard />
     </React.Fragment>
   );
 }

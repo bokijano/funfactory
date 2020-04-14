@@ -1,0 +1,319 @@
+.game-board {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-board .games {
+  position: relative;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-board .games .memory-games {
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4), 5px 5px 5px rgba(0, 0, 0, 0.4), 5px 5px 50px rgba(0, 0, 0, 0.4), 5px 5px 200px rgba(0, 0, 0, 0.4);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4), 5px 5px 5px rgba(0, 0, 0, 0.4), 5px 5px 50px rgba(0, 0, 0, 0.4), 5px 5px 200px rgba(0, 0, 0, 0.4);
+}
+
+.game-board .games .memory-games .close {
+  width: 100%;
+  margin-left: 80%;
+  margin-top: 5px !important;
+  padding: 10px 0;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.game-board .games .memory-games a {
+  width: 40%;
+  margin: 5%;
+}
+
+.game-board .games .memory-games a img {
+  width: 70%;
+  margin: 0 15%;
+}
+
+.game-board .games .memory-games a:hover {
+  -webkit-box-shadow: 2px 2px 5px #b4b4b4;
+          box-shadow: 2px 2px 5px #b4b4b4;
+}
+
+.game-board .games .no-display {
+  display: none;
+}
+
+.game-board .games h1 {
+  position: absolute;
+  text-transform: capitalize;
+  color: yellowgreen;
+  font-size: 2rem;
+  font-family: "Concert One", cursive;
+  -webkit-animation: animateTitle 2s linear infinite;
+          animation: animateTitle 2s linear infinite;
+}
+
+@-webkit-keyframes animateTitle {
+  0% {
+    opacity: 0.2;
+    font-size: 2rem;
+    text-transform: calitalize;
+    color: yellowgreen;
+  }
+  25% {
+    opacity: 0.4;
+    font-size: 1.8rem;
+    text-transform: lowercase;
+    color: #7e7e31;
+  }
+  50% {
+    opacity: 0.7;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    color: yellowgreen;
+  }
+  75% {
+    opacity: 1;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #31440b;
+  }
+  100% {
+    opacity: 0.6;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #608021;
+  }
+}
+
+@keyframes animateTitle {
+  0% {
+    opacity: 0.2;
+    font-size: 2rem;
+    text-transform: calitalize;
+    color: yellowgreen;
+  }
+  25% {
+    opacity: 0.4;
+    font-size: 1.8rem;
+    text-transform: lowercase;
+    color: #7e7e31;
+  }
+  50% {
+    opacity: 0.7;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    color: yellowgreen;
+  }
+  75% {
+    opacity: 1;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #31440b;
+  }
+  100% {
+    opacity: 0.6;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #608021;
+  }
+}
+
+.game-board .games button {
+  display: block !important;
+  margin-top: 150px;
+  padding: 10px;
+  font-family: "Luckiest Guy", cursive;
+  background: yellowgreen;
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen, 0 0 200px yellowgreen;
+          box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen, 0 0 200px yellowgreen;
+  border: none;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  font-size: 2rem;
+  -webkit-animation: btn-animate 2s linear infinite;
+          animation: btn-animate 2s linear infinite;
+}
+
+@-webkit-keyframes btn-animate {
+  0% {
+    font-size: 2rem;
+  }
+  25% {
+    font-size: 2.1rem;
+  }
+  50% {
+    font-size: 2.2rem;
+  }
+  75% {
+    font-size: 2.1rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+@keyframes btn-animate {
+  0% {
+    font-size: 2rem;
+  }
+  25% {
+    font-size: 2.1rem;
+  }
+  50% {
+    font-size: 2.2rem;
+  }
+  75% {
+    font-size: 2.1rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .game-board {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game-board {
+    margin-top: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .game-board .games {
+    width: 80%;
+  }
+  .game-board .games .memory-games {
+    width: 80%;
+  }
+  .game-board .games .memory-games a img {
+    width: 80%;
+    margin: 0 10%;
+  }
+}
+
+.memory-board {
+  width: 60%;
+  margin: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.memory-board img {
+  cursor: pointer;
+  margin: 1%;
+  width: 23%;
+}
+
+.memory-board .win-msg {
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.memory-board .no-display {
+  display: none;
+}
+
+.memory-board a {
+  text-decoration: none !important;
+  background: dodgerblue !important;
+  color: whitesmoke !important;
+  -webkit-box-shadow: 0 0 5px dodgerblue, 0 0 25px dodgerblue, 0 0 50px dodgerblue, 0 0 200px dodgerblue !important;
+          box-shadow: 0 0 5px dodgerblue, 0 0 25px dodgerblue, 0 0 50px dodgerblue, 0 0 200px dodgerblue !important;
+  display: block !important;
+  margin-top: 30px;
+  padding: 10px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 1.2rem !important;
+  background: yellowgreen;
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen, 0 0 200px yellowgreen;
+          box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen, 0 0 200px yellowgreen;
+  border: none;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  font-size: 2rem;
+  -webkit-animation: btn-animate 2s linear infinite;
+          animation: btn-animate 2s linear infinite;
+}
+
+@keyframes btn-animate {
+  0% {
+    font-size: 2rem;
+  }
+  25% {
+    font-size: 2.1rem;
+  }
+  50% {
+    font-size: 2.2rem;
+  }
+  75% {
+    font-size: 2.1rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .memory-board {
+    width: 80%;
+    margin: 20% 10%;
+  }
+}
+/*# sourceMappingURL=GameBoard.css.map */

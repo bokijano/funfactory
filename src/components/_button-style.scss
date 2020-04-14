@@ -2,8 +2,8 @@
 @mixin button-style {
   background: yellowgreen;
   color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen,
-    0 0 50px rgb(113, 126, 87), 0 0 200px yellowgreen;
+  box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen,
+    0 0 200px yellowgreen;
   border: none;
   cursor: pointer;
   display: none;

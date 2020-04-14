@@ -3,6 +3,7 @@ import Home from "./components/Home/Home";
 import MusicPage from "./components/Music/MusicPage";
 import MoviesPage from "./components/Movies/MoviesPage";
 import GamesPage from "./components/Games/GamesPage";
+import MemoryFood from "./components/Games/memory games/memoryGame";
 
 import { Route, Switch } from "react-router-dom";
 
@@ -14,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => (
+        {(value) => (
           <React.Fragment>
             {value.loading ? (
               <Loader />
@@ -26,6 +27,7 @@ class App extends Component {
                 <Route path="/music" component={MusicPage} />
                 <Route path="/movies" component={MoviesPage} />
                 <Route path="/games" component={GamesPage} />
+                <Route path="/food" component={MemoryFood} />
               </Switch>
             )}
           </React.Fragment>
