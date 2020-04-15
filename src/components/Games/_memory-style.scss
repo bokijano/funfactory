@@ -1,0 +1,77 @@
+@mixin memory-style {
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  .memory-board {
+    width: 450px;
+    margin: 0 auto;
+    padding: 5% 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    img {
+      background-color: whitesmoke;
+      visibility: visible;
+      cursor: pointer;
+      margin: 2px;
+      width: 100px;
+    }
+    .win-msg {
+      display: block;
+      margin-top: -100%;
+      font-size: 1.5rem;
+      text-align: center;
+      h1 {
+        margin-bottom: 30px;
+        font-family: "Luckiest Guy", cursive;
+      }
+    }
+    a {
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      padding: 10px 20px;
+      color: black;
+      font-weight: bolder;
+      text-align: center;
+      letter-spacing: 2px;
+      width: 80%;
+      height: 100%;
+      font-family: "Caveat Brush", cursive;
+      border: 2px solid #333;
+      box-sizing: border-box;
+      transition: 0.5s;
+      &:hover {
+        border-radius: 30px;
+        border: 3px solid yellowgreen;
+        color: yellowgreen;
+        background-color: #333;
+        box-shadow: 2px 2px 4px #333;
+      }
+    }
+    .no-display {
+      display: none;
+    }
+    @media screen and (max-width: 1200px) {
+      padding: 5% 0;
+    }
+    @media screen and (max-width: 1000px) {
+      padding: 7% 0;
+    }
+    @media screen and (max-width: 600px) {
+      width: 450px;
+      margin: 0 auto;
+      padding: 15% 0;
+    }
+    @media screen and (max-width: 450px) {
+      width: 350px;
+      margin: 0 auto;
+      img {
+        width: 80px;
+      }
+    }
+  }
+}

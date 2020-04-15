@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import Food from "./foodData";
+import Sport from "./sportData";
 import { Link } from "react-router-dom";
 
-import Blank from "./../memory pictures/food/blank.png";
-import White from "./../memory pictures/food/white.png";
+import Card from "./../memory pictures/sport/card.png";
 
 export default class memoryGame extends Component {
   state = {
-    food: Food.sort(() => Math.random() - 0.5),
+    sport: Sport.sort(() => Math.random() - 0.5),
     cardArray: [],
-    blank: Blank,
-    white: White,
+    card: Card,
     cardChosen: [],
     cardChosenId: [],
     cardsWon: [],
@@ -18,10 +16,10 @@ export default class memoryGame extends Component {
   };
   arrayDisplay = () => {
     let blankArray = [];
-    for (let i = 0; i < this.state.food.length; i++) {
+    for (let i = 0; i < this.state.sport.length; i++) {
       blankArray.push({
         id: i,
-        src: this.state.blank,
+        src: this.state.card,
       });
     }
     this.setState({
@@ -39,7 +37,7 @@ export default class memoryGame extends Component {
     }
 
     this.setState({
-      food: Food.sort(() => Math.random() - 0.5),
+      sport: Sport.sort(() => Math.random() - 0.5),
       cardChosen: [],
       cardChosenId: [],
       cardsWon: [],
@@ -58,8 +56,8 @@ export default class memoryGame extends Component {
 
       this.state.cardsWon.push(this.state.cardChosen);
     } else {
-      this.state.cardArray[optionOne].src = this.state.blank;
-      this.state.cardArray[optionTwo].src = this.state.blank;
+      this.state.cardArray[optionOne].src = this.state.card;
+      this.state.cardArray[optionTwo].src = this.state.card;
     }
     if (this.state.cardsWon.length === this.state.cardArray.length / 2) {
       this.setState({
@@ -73,10 +71,10 @@ export default class memoryGame extends Component {
   };
   flipCard(id) {
     let cardId = id;
-    let flipCard = this.state.food[cardId].name;
+    let flipCard = this.state.sport[cardId].name;
 
     // change blank picture to food picture
-    this.state.cardArray[cardId].src = this.state.food[cardId].img;
+    this.state.cardArray[cardId].src = this.state.sport[cardId].img;
 
     let cardChosen = [...this.state.cardChosen, flipCard];
 
@@ -92,7 +90,7 @@ export default class memoryGame extends Component {
   }
   render() {
     return (
-      <section className="whole-page">
+      <section className="sport-page">
         <div className="memory-board">
           {this.state.cardArray.map((image) => {
             return (
@@ -107,7 +105,7 @@ export default class memoryGame extends Component {
           })}
           <section className={this.state.winMsg ? "win-msg" : "no-display"}>
             <h1>Congratulations!!! You win the game!!!</h1>
-            <Link to="/food" onClick={this.newGame}>
+            <Link to="/sport" onClick={this.newGame}>
               Play Again
             </Link>
           </section>

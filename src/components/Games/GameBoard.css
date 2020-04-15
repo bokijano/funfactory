@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .game-board {
   margin-top: 100px;
   display: -webkit-box;
@@ -40,9 +47,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -68,8 +75,8 @@
 }
 
 .game-board .games .memory-games a img {
-  width: 70%;
-  margin: 0 15%;
+  width: 60%;
+  margin: 0 20%;
 }
 
 .game-board .games .memory-games a:hover {
@@ -231,14 +238,23 @@
     width: 80%;
   }
   .game-board .games .memory-games a img {
-    width: 80%;
-    margin: 0 10%;
+    width: 70%;
+    margin: 0 15%;
   }
 }
 
-.memory-board {
-  width: 60%;
-  margin: 20%;
+.whole-page {
+  background: url("./memory pictures/food/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.whole-page .memory-board {
+  width: 450px;
+  margin: 0 auto;
+  padding: 5% 0;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,68 +268,194 @@
           align-items: center;
 }
 
-.memory-board img {
+.whole-page .memory-board img {
+  background-color: whitesmoke;
+  visibility: visible;
   cursor: pointer;
-  margin: 1%;
-  width: 23%;
+  margin: 2px;
+  width: 100px;
 }
 
-.memory-board .win-msg {
+.whole-page .memory-board .win-msg {
   display: block;
-  font-size: 2rem;
+  margin-top: -100%;
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.memory-board .no-display {
-  display: none;
-}
-
-.memory-board a {
-  text-decoration: none !important;
-  background: dodgerblue !important;
-  color: whitesmoke !important;
-  -webkit-box-shadow: 0 0 5px dodgerblue, 0 0 25px dodgerblue, 0 0 50px dodgerblue, 0 0 200px dodgerblue !important;
-          box-shadow: 0 0 5px dodgerblue, 0 0 25px dodgerblue, 0 0 50px dodgerblue, 0 0 200px dodgerblue !important;
-  display: block !important;
-  margin-top: 30px;
-  padding: 10px;
+.whole-page .memory-board .win-msg h1 {
+  margin-bottom: 30px;
   font-family: "Luckiest Guy", cursive;
-  font-size: 1.2rem !important;
-  background: yellowgreen;
-  color: rgba(0, 0, 0, 0.9);
-  -webkit-box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen, 0 0 200px yellowgreen;
-          box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen, 0 0 200px yellowgreen;
-  border: none;
-  cursor: pointer;
-  display: none;
-  outline: none;
-  font-size: 2rem;
-  -webkit-animation: btn-animate 2s linear infinite;
-          animation: btn-animate 2s linear infinite;
 }
 
-@keyframes btn-animate {
-  0% {
-    font-size: 2rem;
-  }
-  25% {
-    font-size: 2.1rem;
-  }
-  50% {
-    font-size: 2.2rem;
-  }
-  75% {
-    font-size: 2.1rem;
-  }
-  100% {
-    font-size: 2rem;
-  }
+.whole-page .memory-board a {
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 80%;
+  height: 100%;
+  font-family: "Caveat Brush", cursive;
+  border: 2px solid #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.whole-page .memory-board a:hover {
+  border-radius: 30px;
+  border: 3px solid yellowgreen;
+  color: yellowgreen;
+  background-color: #333;
+  -webkit-box-shadow: 2px 2px 4px #333;
+          box-shadow: 2px 2px 4px #333;
+}
+
+.whole-page .memory-board .no-display {
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {
-  .memory-board {
-    width: 80%;
-    margin: 20% 10%;
+  .whole-page .memory-board {
+    padding: 5% 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .whole-page .memory-board {
+    padding: 7% 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .whole-page .memory-board {
+    width: 450px;
+    margin: 0 auto;
+    padding: 15% 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .whole-page .memory-board {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .whole-page .memory-board img {
+    width: 80px;
+  }
+}
+
+.sport-page {
+  background: url("./memory pictures/sport/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.sport-page .memory-board {
+  width: 450px;
+  margin: 0 auto;
+  padding: 5% 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sport-page .memory-board img {
+  background-color: whitesmoke;
+  visibility: visible;
+  cursor: pointer;
+  margin: 2px;
+  width: 100px;
+}
+
+.sport-page .memory-board .win-msg {
+  display: block;
+  margin-top: -100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.sport-page .memory-board .win-msg h1 {
+  margin-bottom: 30px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.sport-page .memory-board a {
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 80%;
+  height: 100%;
+  font-family: "Caveat Brush", cursive;
+  border: 2px solid #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sport-page .memory-board a:hover {
+  border-radius: 30px;
+  border: 3px solid yellowgreen;
+  color: yellowgreen;
+  background-color: #333;
+  -webkit-box-shadow: 2px 2px 4px #333;
+          box-shadow: 2px 2px 4px #333;
+}
+
+.sport-page .memory-board .no-display {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .sport-page .memory-board {
+    padding: 5% 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sport-page .memory-board {
+    padding: 7% 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sport-page .memory-board {
+    width: 450px;
+    margin: 0 auto;
+    padding: 15% 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sport-page .memory-board {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .sport-page .memory-board img {
+    width: 80px;
   }
 }
 /*# sourceMappingURL=GameBoard.css.map */

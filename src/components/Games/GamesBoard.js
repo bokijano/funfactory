@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaRegWindowClose } from "react-icons/fa";
 
 import Sport from "./memory pictures/sport/sport.png";
-import Food from "./memory pictures/food/hotdog.png";
+import Food from "./memory pictures/food/cheeseburger.png";
 import Cards from "./memory pictures/cards/cards.png";
 import Actors from "./memory pictures/actors/actors.png";
 
@@ -43,7 +43,7 @@ export default class GamesBoard extends Component {
             <Link to="">
               <img src={Actors} alt="actors pct" />
             </Link>
-            <Link to="">
+            <Link to="/sport">
               <img src={Sport} alt="sport pct" />
             </Link>
             <Link to="">

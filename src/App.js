@@ -4,6 +4,7 @@ import MusicPage from "./components/Music/MusicPage";
 import MoviesPage from "./components/Movies/MoviesPage";
 import GamesPage from "./components/Games/GamesPage";
 import MemoryFood from "./components/Games/memory games/memoryGame";
+import MemorySport from "./components/Games/memory games/sport";
 
 import { Route, Switch } from "react-router-dom";
 
@@ -24,10 +25,11 @@ class App extends Component {
             ) : (
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/music" component={MusicPage} />
-                <Route path="/movies" component={MoviesPage} />
-                <Route path="/games" component={GamesPage} />
-                <Route path="/food" component={MemoryFood} />
+                <Route exact path="/music" component={MusicPage} />
+                <Route exact path="/movies" component={MoviesPage} />
+                <Route exact path="/games" component={GamesPage} />
+                <Route exact path="/food" component={MemoryFood} />
+                <Route exact path="/sport" component={MemorySport} />
               </Switch>
             )}
           </React.Fragment>
