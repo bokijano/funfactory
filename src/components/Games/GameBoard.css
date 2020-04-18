@@ -277,34 +277,6 @@
   width: 100px;
 }
 
-.whole-page .memory-board img:hover,
-.whole-page .memory-board img:active {
-  -webkit-animation: rotate-card 1s linear forwards;
-          animation: rotate-card 1s linear forwards;
-}
-
-@-webkit-keyframes rotate-card {
-  0% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-
-@keyframes rotate-card {
-  0% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-
 .whole-page .memory-board .win-msg {
   display: block;
   margin-top: -100%;
@@ -447,23 +419,6 @@
   cursor: pointer;
   margin: 2px;
   width: 100px;
-}
-
-.sport-page .memory-board img:hover,
-.sport-page .memory-board img:active {
-  -webkit-animation: rotate-card 1s linear forwards;
-          animation: rotate-card 1s linear forwards;
-}
-
-@keyframes rotate-card {
-  0% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
 }
 
 .sport-page .memory-board .win-msg {
@@ -611,25 +566,6 @@
   cursor: pointer;
   margin: 2px;
   width: 100px;
-}
-
-.actors-page .memory-board img:hover,
-.actors-page .memory-board img:active,
-.cards-page .memory-board img:hover,
-.cards-page .memory-board img:active {
-  -webkit-animation: rotate-card 1s linear forwards;
-          animation: rotate-card 1s linear forwards;
-}
-
-@keyframes rotate-card {
-  0% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
 }
 
 .actors-page .memory-board .win-msg,
