@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 
 import Card from "./../memory pictures/sport/card.png";
 
+import Food from "./../memory pictures/food/pizza.png";
+import Cards from "./../memory pictures/cards/cards.png";
+import Actors from "./../memory pictures/actors/actors.png";
+
 export default class memoryGame extends Component {
   state = {
     sport: Sport.sort(() => Math.random() - 0.5),
@@ -48,7 +52,10 @@ export default class memoryGame extends Component {
     let cards = document.querySelectorAll("img");
     let optionOne = this.state.cardChosenId[0];
     let optionTwo = this.state.cardChosenId[1];
-    if (this.state.cardChosen[0] === this.state.cardChosen[1]) {
+    if (
+      this.state.cardChosen[0] === this.state.cardChosen[1] &&
+      optionOne !== optionTwo
+    ) {
       // remove cards from board
       cards[optionOne].style.visibility = "hidden";
 
@@ -110,6 +117,17 @@ export default class memoryGame extends Component {
             </Link>
           </section>
           <Link to="/games">Back to Games</Link>
+          <section className="other-games">
+            <Link to="/food">
+              <img src={Food} alt="food pct" />
+            </Link>
+            <Link to="/actors">
+              <img src={Actors} alt="actors pct" />
+            </Link>
+            <Link to="/cards">
+              <img src={Cards} alt="cards pct" />
+            </Link>
+          </section>
         </div>
       </section>
     );

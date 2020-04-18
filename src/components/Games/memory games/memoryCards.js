@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import Food from "./foodData";
 import { Link } from "react-router-dom";
 
-import Blank from "./../memory pictures/food/blank.png";
+import Cards from "./cardsData";
+import CardDeck from "./../memory pictures/cards/card-deck.png";
 
 import Sport from "./../memory pictures/sport/sport.png";
-import Cards from "./../memory pictures/cards/cards.png";
+import Food from "./../memory pictures/food/pizza.png";
 import Actors from "./../memory pictures/actors/actors.png";
 
-export default class memoryGame extends Component {
+export default class MemoryCards extends Component {
   state = {
-    food: Food.sort(() => Math.random() - 0.5),
+    cards: Cards.sort(() => Math.random() - 0.5),
     cardArray: [],
-    blank: Blank,
+    deck: CardDeck,
     cardChosen: [],
     cardChosenId: [],
     cardsWon: [],
@@ -20,10 +20,10 @@ export default class memoryGame extends Component {
   };
   arrayDisplay = () => {
     let blankArray = [];
-    for (let i = 0; i < this.state.food.length; i++) {
+    for (let i = 0; i < this.state.cards.length; i++) {
       blankArray.push({
         id: i,
-        src: this.state.blank,
+        src: this.state.deck,
       });
     }
     this.setState({
@@ -41,7 +41,7 @@ export default class memoryGame extends Component {
     }
 
     this.setState({
-      food: Food.sort(() => Math.random() - 0.5),
+      cards: Cards.sort(() => Math.random() - 0.5),
       cardChosen: [],
       cardChosenId: [],
       cardsWon: [],
@@ -63,8 +63,8 @@ export default class memoryGame extends Component {
 
       this.state.cardsWon.push(this.state.cardChosen);
     } else {
-      this.state.cardArray[optionOne].src = this.state.blank;
-      this.state.cardArray[optionTwo].src = this.state.blank;
+      this.state.cardArray[optionOne].src = this.state.deck;
+      this.state.cardArray[optionTwo].src = this.state.deck;
     }
     if (this.state.cardsWon.length === this.state.cardArray.length / 2) {
       this.setState({
@@ -78,11 +78,10 @@ export default class memoryGame extends Component {
   };
   flipCard(id) {
     let cardId = id;
-    let flipCard = this.state.food[cardId].name;
+    let flipCard = this.state.cards[cardId].name;
 
     // change blank picture to food picture
-    this.state.cardArray[cardId].src = this.state.food[cardId].img;
-
+    this.state.cardArray[cardId].src = this.state.cards[cardId].img;
     let cardChosen = [...this.state.cardChosen, flipCard];
 
     let cardChosenId = [...this.state.cardChosenId, id];
@@ -97,35 +96,35 @@ export default class memoryGame extends Component {
   }
   render() {
     return (
-      <section className="whole-page">
+      <section className="cards-page">
         <div className="memory-board">
-          {this.state.cardArray.map((image) => {
+          {this.state.cardArray.map((actor) => {
             return (
               <img
-                onClick={() => this.flipCard(image.id)}
-                id={image.id}
-                key={image.id}
-                src={image.src}
-                alt="blank card"
+                onClick={() => this.flipCard(actor.id)}
+                key={actor.id}
+                id={actor.id}
+                src={actor.src}
+                alt=""
               />
             );
           })}
           <section className={this.state.winMsg ? "win-msg" : "no-display"}>
             <h1>Congratulations!!! You win the game!!!</h1>
-            <Link to="/food" onClick={this.newGame}>
+            <Link onClick={this.newGame} to="/cards">
               Play Again
             </Link>
           </section>
           <Link to="/games">Back to Games</Link>
           <section className="other-games">
+            <Link to="/food">
+              <img src={Food} alt="food pct" />
+            </Link>
             <Link to="/actors">
               <img src={Actors} alt="actors pct" />
             </Link>
             <Link to="/sport">
               <img src={Sport} alt="sport pct" />
-            </Link>
-            <Link to="/cards">
-              <img src={Cards} alt="cards pct" />
             </Link>
           </section>
         </div>

@@ -5,6 +5,8 @@ import MoviesPage from "./components/Movies/MoviesPage";
 import GamesPage from "./components/Games/GamesPage";
 import MemoryFood from "./components/Games/memory games/memoryGame";
 import MemorySport from "./components/Games/memory games/sport";
+import MemoryActors from "./components/Games/memory games/actors";
+import MemoryCards from "./components/Games/memory games/memoryCards";
 
 import { Route, Switch } from "react-router-dom";
 
@@ -30,6 +32,8 @@ class App extends Component {
                 <Route exact path="/games" component={GamesPage} />
                 <Route exact path="/food" component={MemoryFood} />
                 <Route exact path="/sport" component={MemorySport} />
+                <Route exact path="/actors" component={MemoryActors} />
+                <Route exact path="/cards" component={MemoryCards} />
               </Switch>
             )}
           </React.Fragment>

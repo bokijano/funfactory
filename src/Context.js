@@ -34,6 +34,7 @@ export default class ProductProvider extends Component {
     date: "",
     genres: "",
     trailerURL: "https://www.youtube.com/embed/",
+    text: "Hello",
   };
   // generate url
   generateUrl(path) {

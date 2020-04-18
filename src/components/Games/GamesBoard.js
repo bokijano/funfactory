@@ -4,16 +4,13 @@ import { Link } from "react-router-dom";
 import { FaRegWindowClose } from "react-icons/fa";
 
 import Sport from "./memory pictures/sport/sport.png";
-import Food from "./memory pictures/food/cheeseburger.png";
+import Food from "./memory pictures/food/pizza.png";
 import Cards from "./memory pictures/cards/cards.png";
 import Actors from "./memory pictures/actors/actors.png";
 
 export default class GamesBoard extends Component {
   state = {
     openMemory: false,
-  };
-  test = () => {
-    console.log("work");
   };
   openMemoryGames = () => {
     this.setState({
@@ -40,13 +37,13 @@ export default class GamesBoard extends Component {
             <Link to="/food">
               <img src={Food} alt="food pct" />
             </Link>
-            <Link to="">
+            <Link to="/actors">
               <img src={Actors} alt="actors pct" />
             </Link>
             <Link to="/sport">
               <img src={Sport} alt="sport pct" />
             </Link>
-            <Link to="">
+            <Link to="/cards">
               <img src={Cards} alt="cards pct" />
             </Link>
           </div>

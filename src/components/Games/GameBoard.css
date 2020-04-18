@@ -77,6 +77,7 @@
 .game-board .games .memory-games a img {
   width: 60%;
   margin: 0 20%;
+  background-color: white !important;
 }
 
 .game-board .games .memory-games a:hover {
@@ -276,6 +277,34 @@
   width: 100px;
 }
 
+.whole-page .memory-board img:hover,
+.whole-page .memory-board img:active {
+  -webkit-animation: rotate-card 1s linear forwards;
+          animation: rotate-card 1s linear forwards;
+}
+
+@-webkit-keyframes rotate-card {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate-card {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
 .whole-page .memory-board .win-msg {
   display: block;
   margin-top: -100%;
@@ -321,6 +350,40 @@
   display: none;
 }
 
+.whole-page .memory-board .other-games {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.whole-page .memory-board .other-games a {
+  border: none !important;
+}
+
+.whole-page .memory-board .other-games a img {
+  width: 70px;
+}
+
+.whole-page .memory-board .other-games a img:hover {
+  -webkit-box-shadow: 5px 5px 10px #333 !important;
+          box-shadow: 5px 5px 10px #333 !important;
+}
+
+.whole-page .memory-board .other-games a:hover {
+  border-radius: none !important;
+  border: none !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 @media screen and (max-width: 1200px) {
   .whole-page .memory-board {
     padding: 5% 0;
@@ -353,6 +416,8 @@
 
 .sport-page {
   background: url("./memory pictures/sport/background.png");
+  background-size: contain !important;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -382,6 +447,23 @@
   cursor: pointer;
   margin: 2px;
   width: 100px;
+}
+
+.sport-page .memory-board img:hover,
+.sport-page .memory-board img:active {
+  -webkit-animation: rotate-card 1s linear forwards;
+          animation: rotate-card 1s linear forwards;
+}
+
+@keyframes rotate-card {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 
 .sport-page .memory-board .win-msg {
@@ -429,6 +511,40 @@
   display: none;
 }
 
+.sport-page .memory-board .other-games {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sport-page .memory-board .other-games a {
+  border: none !important;
+}
+
+.sport-page .memory-board .other-games a img {
+  width: 70px;
+}
+
+.sport-page .memory-board .other-games a img:hover {
+  -webkit-box-shadow: 5px 5px 10px #333 !important;
+          box-shadow: 5px 5px 10px #333 !important;
+}
+
+.sport-page .memory-board .other-games a:hover {
+  border-radius: none !important;
+  border: none !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 @media screen and (max-width: 1200px) {
   .sport-page .memory-board {
     padding: 5% 0;
@@ -456,6 +572,246 @@
   }
   .sport-page .memory-board img {
     width: 80px;
+  }
+}
+
+.actors-page,
+.cards-page {
+  background: url("./memory pictures/actors/background.jpg");
+  background-size: contain !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.actors-page .memory-board,
+.cards-page .memory-board {
+  width: 450px;
+  margin: 0 auto;
+  padding: 5% 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actors-page .memory-board img,
+.cards-page .memory-board img {
+  background-color: whitesmoke;
+  visibility: visible;
+  cursor: pointer;
+  margin: 2px;
+  width: 100px;
+}
+
+.actors-page .memory-board img:hover,
+.actors-page .memory-board img:active,
+.cards-page .memory-board img:hover,
+.cards-page .memory-board img:active {
+  -webkit-animation: rotate-card 1s linear forwards;
+          animation: rotate-card 1s linear forwards;
+}
+
+@keyframes rotate-card {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.actors-page .memory-board .win-msg,
+.cards-page .memory-board .win-msg {
+  display: block;
+  margin-top: -100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.actors-page .memory-board .win-msg h1,
+.cards-page .memory-board .win-msg h1 {
+  margin-bottom: 30px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.actors-page .memory-board a,
+.cards-page .memory-board a {
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 80%;
+  height: 100%;
+  font-family: "Caveat Brush", cursive;
+  border: 2px solid #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.actors-page .memory-board a:hover,
+.cards-page .memory-board a:hover {
+  border-radius: 30px;
+  border: 3px solid yellowgreen;
+  color: yellowgreen;
+  background-color: #333;
+  -webkit-box-shadow: 2px 2px 4px #333;
+          box-shadow: 2px 2px 4px #333;
+}
+
+.actors-page .memory-board .no-display,
+.cards-page .memory-board .no-display {
+  display: none;
+}
+
+.actors-page .memory-board .other-games,
+.cards-page .memory-board .other-games {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actors-page .memory-board .other-games a,
+.cards-page .memory-board .other-games a {
+  border: none !important;
+}
+
+.actors-page .memory-board .other-games a img,
+.cards-page .memory-board .other-games a img {
+  width: 70px;
+}
+
+.actors-page .memory-board .other-games a img:hover,
+.cards-page .memory-board .other-games a img:hover {
+  -webkit-box-shadow: 5px 5px 10px #333 !important;
+          box-shadow: 5px 5px 10px #333 !important;
+}
+
+.actors-page .memory-board .other-games a:hover,
+.cards-page .memory-board .other-games a:hover {
+  border-radius: none !important;
+  border: none !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .actors-page .memory-board,
+  .cards-page .memory-board {
+    padding: 5% 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .actors-page .memory-board,
+  .cards-page .memory-board {
+    padding: 7% 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .actors-page .memory-board,
+  .cards-page .memory-board {
+    width: 450px;
+    margin: 0 auto;
+    padding: 15% 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .actors-page .memory-board,
+  .cards-page .memory-board {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .actors-page .memory-board img,
+  .cards-page .memory-board img {
+    width: 80px;
+  }
+}
+
+.actors-page .memory-board .win-msg,
+.cards-page .memory-board .win-msg {
+  color: #8d1717 !important;
+  margin-top: -180% !important;
+}
+
+.actors-page .memory-board a:hover,
+.cards-page .memory-board a:hover {
+  border: 3px solid #8d1717 !important;
+  color: whitesmoke !important;
+}
+
+.actors-page .memory-board img,
+.cards-page .memory-board img {
+  width: 80px !important;
+}
+
+@media screen and (max-width: 450px) {
+  .actors-page .memory-board img,
+  .cards-page .memory-board img {
+    width: 65px !important;
+  }
+}
+
+.cards-page {
+  background: url("./memory pictures/cards/background1.png") !important;
+  background: url("./memory pictures/cards/background.png") !important;
+  background-size: cover !important;
+}
+
+.cards-page .memory-board {
+  width: 520px !important;
+}
+
+.cards-page .memory-board img {
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .cards-page {
+    background-size: contain !important;
+  }
+  .cards-page .memory-board {
+    width: 450px !important;
+  }
+  .cards-page .memory-board img {
+    width: 65px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cards-page .memory-board {
+    width: 350px !important;
+  }
+  .cards-page .memory-board img {
+    width: 75px !important;
   }
 }
 /*# sourceMappingURL=GameBoard.css.map */

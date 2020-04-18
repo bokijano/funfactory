@@ -18,6 +18,18 @@
       margin: 2px;
       width: 100px;
     }
+    img:hover,
+    img:active {
+      animation: rotate-card 1s linear forwards;
+      @keyframes rotate-card {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+    }
     .win-msg {
       display: block;
       margin-top: -100%;
@@ -54,6 +66,27 @@
     }
     .no-display {
       display: none;
+    }
+    .other-games {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        border: none !important;
+        img {
+          width: 70px;
+          &:hover {
+            box-shadow: 5px 5px 10px #333 !important;
+          }
+        }
+        &:hover {
+          border-radius: none !important;
+          border: none !important;
+          background-color: transparent !important;
+          box-shadow: none !important;
+        }
+      }
     }
     @media screen and (max-width: 1200px) {
       padding: 5% 0;

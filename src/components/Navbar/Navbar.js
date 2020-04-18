@@ -8,7 +8,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => (
+        {(value) => (
           <header className="navbar">
             <h1>
               <span>f</span>
@@ -45,7 +45,7 @@ export default class Navbar extends Component {
                 <span></span>
                 Movies
               </Link>
-              <Link to="games" onClick={value.handleBack}>
+              <Link to="/games" onClick={value.handleBack}>
                 <span></span>
                 <span></span>
                 <span></span>

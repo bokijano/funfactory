@@ -49,6 +49,7 @@
         img {
           width: 60%;
           margin: 0 20%;
+          background-color: white !important;
         }
         &:hover {
           box-shadow: 2px 2px 5px rgb(180, 180, 180);
@@ -130,85 +131,70 @@
 // food game style
 .whole-page {
   background: url("./memory pictures/food/back.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  .memory-board {
-    width: 450px;
-    margin: 0 auto;
-    padding: 5% 0;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    img {
-      background-color: whitesmoke;
-      visibility: visible;
-      cursor: pointer;
-      margin: 2px;
-      width: 100px;
-    }
-    .win-msg {
-      display: block;
-      margin-top: -100%;
-      font-size: 1.5rem;
-      text-align: center;
-      h1 {
-        margin-bottom: 30px;
-        font-family: "Luckiest Guy", cursive;
-      }
-    }
-    a {
-      cursor: pointer;
-      margin-top: 20px;
-      font-size: 1.5rem;
-      text-decoration: none;
-      padding: 10px 20px;
-      color: black;
-      font-weight: bolder;
-      text-align: center;
-      letter-spacing: 2px;
-      width: 80%;
-      height: 100%;
-      font-family: "Caveat Brush", cursive;
-      border: 2px solid #333;
-      box-sizing: border-box;
-      transition: 0.5s;
-      &:hover {
-        border-radius: 30px;
-        border: 3px solid yellowgreen;
-        color: yellowgreen;
-        background-color: #333;
-        box-shadow: 2px 2px 4px #333;
-      }
-    }
-    .no-display {
-      display: none;
-    }
-    @media screen and (max-width: 1200px) {
-      padding: 5% 0;
-    }
-    @media screen and (max-width: 1000px) {
-      padding: 7% 0;
-    }
-    @media screen and (max-width: 600px) {
-      width: 450px;
-      margin: 0 auto;
-      padding: 15% 0;
-    }
-    @media screen and (max-width: 450px) {
-      width: 350px;
-      margin: 0 auto;
-      img {
-        width: 80px;
-      }
-    }
-  }
+  @include memory-style;
 }
 
 // sport game style
 .sport-page {
   background: url("./memory pictures/sport/background.png");
+  background-size: contain !important;
+  background-position: center;
   @include memory-style;
+}
+
+// actors game style
+.actors-page,
+.cards-page {
+  background: url("./memory pictures/actors/background.jpg");
+  background-size: contain !important;
+  background-position: center;
+  @include memory-style;
+  .memory-board {
+    .win-msg {
+      color: rgb(141, 23, 23) !important;
+      margin-top: -180% !important;
+    }
+    a:hover {
+      border: 3px solid rgb(141, 23, 23) !important;
+      color: whitesmoke !important;
+    }
+    img {
+      width: 80px !important;
+    }
+    @media screen and (max-width: 450px) {
+      img {
+        width: 65px !important;
+      }
+    }
+  }
+}
+
+//cards page style
+.cards-page {
+  background: url("./memory pictures/cards/background1.png") !important;
+  background: url("./memory pictures/cards/background.png") !important;
+  background-size: cover !important;
+  .memory-board {
+    width: 520px !important;
+    img {
+      border-radius: 8px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    background-size: contain !important;
+    .memory-board {
+      width: 450px !important;
+      img {
+        width: 65px !important;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .memory-board {
+      width: 350px !important;
+      img {
+        width: 75px !important;
+      }
+    }
+  }
 }
