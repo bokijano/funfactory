@@ -50,7 +50,9 @@ export default class GamesBoard extends Component {
         </section>
         <section className="games">
           <h1>snake</h1>
-          <button onClick={this.test}>play</button>
+          <Link style={{ textDecoration: "none" }} to="/snake">
+            <button onClick={this.test}>play</button>
+          </Link>
         </section>
         <section className="games">
           <h1>tetris</h1>

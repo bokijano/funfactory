@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  position: fixed;
+  padding: 50px;
+  width: 60%;
+  height: 100%;
+  margin: 0 20%;
+  background: url("snake.jpg");
+  background-repeat: no-repeat;
+  background-size: 900px;
+  background-position: center;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    padding: 50px;
+    width: 100%;
+    margin: 0;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 50px 15px;
+  }
+  .back-games {
+    float: right;
+    .back-btn {
+      width: 50px;
+      height: 50px;
+      margin-top: -50px;
+      margin-right: -20px;
+      color: black;
+      @media screen and (max-width: 400px) {
+        margin-right: -5px;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    width: 50%;
+    margin: -20px auto -30px auto;
+    color: black;
+    font-family: "Lemonada", cursive;
+    text-transform: uppercase;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding: 10px;
+    span {
+      font-weight: bolder;
+      font-style: italic;
+    }
+    @media screen and (max-width: 768px) {
+      width: 70%;
+    }
+  }
+  .grid {
+    position: relative;
+    margin: 50px auto;
+    width: 310px;
+    height: 310px;
+    border: 5px solid grey;
+    background-color: #333;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px whitesmoke, 5px 5px 10px whitesmoke,
+      5px 5px 10px whitesmoke, 5px 5px 10px whitesmoke;
+    .snake {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: grey;
+      border: 1px solid #fff;
+      z-index: 2;
+      box-sizing: border-box;
+    }
+    .food {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border: 1px solid #fff;
+      background-color: red;
+      z-index: 1;
+      box-sizing: border-box;
+    }
+  }
+  .arrows {
+    margin: -40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    button {
+      width: 50px;
+      height: 50px;
+      margin: 0 25px;
+      border: 1px solid black;
+      border-radius: 5px;
+      text-align: center;
+      box-sizing: border-box;
+      .left,
+      .right,
+      .down,
+      .up {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.play-again {
+  text-align: center;
+  margin: 100px auto;
+  color: whitesmoke;
+  button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: whitesmoke;
+    .play-img {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.play-btn {
+  text-align: center;
+  margin-top: 130px;
+  margin-left: 130px;
+  color: whitesmoke;
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  .play-img {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
